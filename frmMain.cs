@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Restaurant_Management_System.View;
 
 namespace Restaurant_Management_System
 {
@@ -48,9 +49,9 @@ namespace Restaurant_Management_System
 
         }
 
-        private void guna2Button2_Click(object sender, EventArgs e)
+        private void btnCategory_Click(object sender, EventArgs e)
         {
-
+            Add_Controls(new frmCategoryView());
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -63,7 +64,7 @@ namespace Restaurant_Management_System
 
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void btnHome_Click(object sender, EventArgs e)
         {
             Add_Controls(new frmHome());
         }
