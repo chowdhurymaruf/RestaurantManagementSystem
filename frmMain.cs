@@ -59,9 +59,9 @@ namespace Restaurant_Management_System
 
         }
 
-        private void guna2Button4_Click(object sender, EventArgs e)
+        private void btnTables_Click(object sender, EventArgs e)
         {
-
+            Add_Controls(new frmTableView());
         }
 
         private void btnHome_Click(object sender, EventArgs e)

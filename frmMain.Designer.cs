@@ -61,7 +61,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(259, 758);
+            this.panel1.Size = new System.Drawing.Size(272, 758);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -84,7 +84,7 @@
             this.btnKitchen.Image = global::Restaurant_Management_System.Properties.Resources.icons8_kitchen_96;
             this.btnKitchen.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnKitchen.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnKitchen.Location = new System.Drawing.Point(73, 645);
+            this.btnKitchen.Location = new System.Drawing.Point(86, 643);
             this.btnKitchen.Name = "btnKitchen";
             this.btnKitchen.Size = new System.Drawing.Size(186, 64);
             this.btnKitchen.TabIndex = 8;
@@ -111,7 +111,7 @@
             this.btnPayment.Image = global::Restaurant_Management_System.Properties.Resources.icons8_payment_100;
             this.btnPayment.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnPayment.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnPayment.Location = new System.Drawing.Point(73, 575);
+            this.btnPayment.Location = new System.Drawing.Point(86, 573);
             this.btnPayment.Name = "btnPayment";
             this.btnPayment.Size = new System.Drawing.Size(186, 64);
             this.btnPayment.TabIndex = 7;
@@ -138,7 +138,7 @@
             this.btnStaff.Image = global::Restaurant_Management_System.Properties.Resources.icons8_staff_100;
             this.btnStaff.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnStaff.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnStaff.Location = new System.Drawing.Point(73, 505);
+            this.btnStaff.Location = new System.Drawing.Point(86, 512);
             this.btnStaff.Name = "btnStaff";
             this.btnStaff.Size = new System.Drawing.Size(186, 64);
             this.btnStaff.TabIndex = 6;
@@ -165,14 +165,14 @@
             this.btnTables.Image = global::Restaurant_Management_System.Properties.Resources.icons8_side_table_64;
             this.btnTables.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnTables.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnTables.Location = new System.Drawing.Point(73, 444);
+            this.btnTables.Location = new System.Drawing.Point(86, 442);
             this.btnTables.Name = "btnTables";
             this.btnTables.Size = new System.Drawing.Size(186, 64);
             this.btnTables.TabIndex = 5;
             this.btnTables.Text = "Tables";
             this.btnTables.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnTables.TextOffset = new System.Drawing.Point(20, 0);
-            this.btnTables.Click += new System.EventHandler(this.guna2Button4_Click);
+            this.btnTables.Click += new System.EventHandler(this.btnTables_Click);
             // 
             // btnProducts
             // 
@@ -193,7 +193,7 @@
             this.btnProducts.Image = global::Restaurant_Management_System.Properties.Resources.icons8_product_50;
             this.btnProducts.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnProducts.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnProducts.Location = new System.Drawing.Point(73, 374);
+            this.btnProducts.Location = new System.Drawing.Point(86, 372);
             this.btnProducts.Name = "btnProducts";
             this.btnProducts.Size = new System.Drawing.Size(186, 64);
             this.btnProducts.TabIndex = 4;
@@ -220,7 +220,7 @@
             this.btnCategory.Image = global::Restaurant_Management_System.Properties.Resources.icons8_categories_64;
             this.btnCategory.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCategory.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnCategory.Location = new System.Drawing.Point(73, 304);
+            this.btnCategory.Location = new System.Drawing.Point(86, 302);
             this.btnCategory.Name = "btnCategory";
             this.btnCategory.Size = new System.Drawing.Size(186, 64);
             this.btnCategory.TabIndex = 3;
@@ -248,7 +248,7 @@
             this.btnHome.Image = global::Restaurant_Management_System.Properties.Resources.icons8_home_50;
             this.btnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnHome.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnHome.Location = new System.Drawing.Point(73, 234);
+            this.btnHome.Location = new System.Drawing.Point(86, 232);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(186, 64);
             this.btnHome.TabIndex = 2;
@@ -262,7 +262,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(22, 141);
+            this.label1.Location = new System.Drawing.Point(35, 141);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(218, 67);
             this.label1.TabIndex = 1;
@@ -272,7 +272,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Restaurant_Management_System.Properties.Resources.icons8_restaurant_100;
-            this.pictureBox1.Location = new System.Drawing.Point(73, 29);
+            this.pictureBox1.Location = new System.Drawing.Point(86, 29);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(110, 98);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -284,9 +284,9 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.panel2.Controls.Add(this.IblUser);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(259, 0);
+            this.panel2.Location = new System.Drawing.Point(272, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(938, 100);
+            this.panel2.Size = new System.Drawing.Size(925, 100);
             this.panel2.TabIndex = 1;
             // 
             // IblUser
@@ -304,9 +304,9 @@
             // CenterPanel
             // 
             this.CenterPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CenterPanel.Location = new System.Drawing.Point(259, 100);
+            this.CenterPanel.Location = new System.Drawing.Point(272, 100);
             this.CenterPanel.Name = "CenterPanel";
-            this.CenterPanel.Size = new System.Drawing.Size(938, 658);
+            this.CenterPanel.Size = new System.Drawing.Size(925, 658);
             this.CenterPanel.TabIndex = 2;
             // 
             // frmMain
