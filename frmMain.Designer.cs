@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnKitchen = new Guna.UI2.WinForms.Guna2Button();
             this.btnPayment = new Guna.UI2.WinForms.Guna2Button();
             this.btnStaff = new Guna.UI2.WinForms.Guna2Button();
             this.btnTables = new Guna.UI2.WinForms.Guna2Button();
-            this.btnProducts = new Guna.UI2.WinForms.Guna2Button();
+            this.btnFoodItems = new Guna.UI2.WinForms.Guna2Button();
             this.btnCategory = new Guna.UI2.WinForms.Guna2Button();
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,7 +54,7 @@
             this.panel1.Controls.Add(this.btnPayment);
             this.panel1.Controls.Add(this.btnStaff);
             this.panel1.Controls.Add(this.btnTables);
-            this.panel1.Controls.Add(this.btnProducts);
+            this.panel1.Controls.Add(this.btnFoodItems);
             this.panel1.Controls.Add(this.btnCategory);
             this.panel1.Controls.Add(this.btnHome);
             this.panel1.Controls.Add(this.label1);
@@ -145,6 +146,7 @@
             this.btnStaff.Text = "Staff";
             this.btnStaff.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnStaff.TextOffset = new System.Drawing.Point(20, 0);
+            this.btnStaff.Click += new System.EventHandler(this.btnStaff_Click);
             // 
             // btnTables
             // 
@@ -174,32 +176,33 @@
             this.btnTables.TextOffset = new System.Drawing.Point(20, 0);
             this.btnTables.Click += new System.EventHandler(this.btnTables_Click);
             // 
-            // btnProducts
+            // btnFoodItems
             // 
-            this.btnProducts.AutoRoundedCorners = true;
-            this.btnProducts.BorderRadius = 31;
-            this.btnProducts.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnProducts.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(85)))), ((int)(((byte)(126)))));
-            this.btnProducts.CheckedState.Image = global::Restaurant_Management_System.Properties.Resources.icons8_product_50__1_;
-            this.btnProducts.CustomizableEdges.BottomRight = false;
-            this.btnProducts.CustomizableEdges.TopRight = false;
-            this.btnProducts.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnProducts.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnProducts.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnProducts.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnProducts.FillColor = System.Drawing.Color.Transparent;
-            this.btnProducts.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProducts.ForeColor = System.Drawing.Color.White;
-            this.btnProducts.Image = global::Restaurant_Management_System.Properties.Resources.icons8_product_50;
-            this.btnProducts.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnProducts.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnProducts.Location = new System.Drawing.Point(86, 372);
-            this.btnProducts.Name = "btnProducts";
-            this.btnProducts.Size = new System.Drawing.Size(186, 64);
-            this.btnProducts.TabIndex = 4;
-            this.btnProducts.Text = "Products";
-            this.btnProducts.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnProducts.TextOffset = new System.Drawing.Point(20, 0);
+            this.btnFoodItems.AutoRoundedCorners = true;
+            this.btnFoodItems.BorderRadius = 31;
+            this.btnFoodItems.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnFoodItems.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(85)))), ((int)(((byte)(126)))));
+            this.btnFoodItems.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btnFoodItems.CustomizableEdges.BottomRight = false;
+            this.btnFoodItems.CustomizableEdges.TopRight = false;
+            this.btnFoodItems.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnFoodItems.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnFoodItems.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnFoodItems.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnFoodItems.FillColor = System.Drawing.Color.Transparent;
+            this.btnFoodItems.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.btnFoodItems.ForeColor = System.Drawing.Color.White;
+            this.btnFoodItems.Image = ((System.Drawing.Image)(resources.GetObject("btnFoodItems.Image")));
+            this.btnFoodItems.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnFoodItems.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnFoodItems.Location = new System.Drawing.Point(86, 372);
+            this.btnFoodItems.Name = "btnFoodItems";
+            this.btnFoodItems.Size = new System.Drawing.Size(186, 64);
+            this.btnFoodItems.TabIndex = 4;
+            this.btnFoodItems.Text = "Food Items";
+            this.btnFoodItems.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnFoodItems.TextOffset = new System.Drawing.Point(20, 0);
+            this.btnFoodItems.Click += new System.EventHandler(this.btnFoodItems_Click);
             // 
             // btnCategory
             // 
@@ -343,7 +346,7 @@
         private Guna.UI2.WinForms.Guna2Button btnPayment;
         private Guna.UI2.WinForms.Guna2Button btnStaff;
         private Guna.UI2.WinForms.Guna2Button btnTables;
-        private Guna.UI2.WinForms.Guna2Button btnProducts;
+        private Guna.UI2.WinForms.Guna2Button btnFoodItems;
         private Guna.UI2.WinForms.Guna2Button btnCategory;
         private Guna.UI2.WinForms.Guna2Button btnKitchen;
         private System.Windows.Forms.Label IblUser;

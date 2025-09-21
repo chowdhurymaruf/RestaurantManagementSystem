@@ -73,5 +73,15 @@ namespace Restaurant_Management_System
         {
 
         }
+
+        private void btnStaff_Click(object sender, EventArgs e)
+        {
+            Add_Controls(new frmStaffView());
+        }
+
+        private void btnFoodItems_Click(object sender, EventArgs e)
+        {
+            Add_Controls(new frmFoodItemView());
+        }
     }
 }
