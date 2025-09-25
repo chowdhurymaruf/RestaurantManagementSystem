@@ -79,7 +79,6 @@
             // guna2Panel2
             // 
             this.guna2Panel2.Size = new System.Drawing.Size(809, 112);
-            this.guna2Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
             // 
             // cbCat
             // 
@@ -171,7 +170,7 @@
             // 
             // txtImage
             // 
-            this.txtImage.Image = ((System.Drawing.Image)(resources.GetObject("txtImage.Image")));
+            this.txtImage.Image = global::Restaurant_Management_System.Properties.Resources.browse_Icon;
             this.txtImage.ImageRotate = 0F;
             this.txtImage.Location = new System.Drawing.Point(602, 133);
             this.txtImage.Name = "txtImage";

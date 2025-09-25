@@ -34,10 +34,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFoodItemView));
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.dgvSno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvCatID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvCatID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvedit = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgvdel = new System.Windows.Forms.DataGridViewImageColumn();
@@ -88,10 +88,10 @@
             this.guna2DataGridView1.ColumnHeadersHeight = 40;
             this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvSno,
-            this.dgvCatID,
             this.dgvId,
             this.dgvName,
             this.dgvPrice,
+            this.dgvCatID,
             this.dgvCategory,
             this.dgvedit,
             this.dgvdel});
@@ -144,14 +144,6 @@
             this.dgvSno.Name = "dgvSno";
             this.dgvSno.ReadOnly = true;
             // 
-            // dgvCatID
-            // 
-            this.dgvCatID.HeaderText = "cID";
-            this.dgvCatID.MinimumWidth = 6;
-            this.dgvCatID.Name = "dgvCatID";
-            this.dgvCatID.ReadOnly = true;
-            this.dgvCatID.Visible = false;
-            // 
             // dgvId
             // 
             this.dgvId.HeaderText = "ID";
@@ -173,6 +165,14 @@
             this.dgvPrice.MinimumWidth = 6;
             this.dgvPrice.Name = "dgvPrice";
             this.dgvPrice.ReadOnly = true;
+            // 
+            // dgvCatID
+            // 
+            this.dgvCatID.HeaderText = "cID";
+            this.dgvCatID.MinimumWidth = 6;
+            this.dgvCatID.Name = "dgvCatID";
+            this.dgvCatID.ReadOnly = true;
+            this.dgvCatID.Visible = false;
             // 
             // dgvCategory
             // 
@@ -227,10 +227,10 @@
 
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSno;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvCatID;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvCatID;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvCategory;
         private System.Windows.Forms.DataGridViewImageColumn dgvedit;
         private System.Windows.Forms.DataGridViewImageColumn dgvdel;

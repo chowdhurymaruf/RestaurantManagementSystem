@@ -58,9 +58,7 @@ namespace Restaurant_Management_System.View
             {
                 frmFoodItemAdd frm = new frmFoodItemAdd();
                 frm.Id = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvId"].Value);
-                frm.txtName.Text = Convert.ToString(guna2DataGridView1.CurrentRow.Cells["dgvName"].Value);
-                frm.txtPrice.Text = Convert.ToString(guna2DataGridView1.CurrentRow.Cells["dgvPhone"].Value);
-                frm.cbCat.Text = Convert.ToString(guna2DataGridView1.CurrentRow.Cells["dgvRole"].Value);
+                frm.cID = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvCatID"].Value);
                 frm.ShowDialog();
                 GetData();
             }
