@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Restaurant_Management_System.Model;
 using Restaurant_Management_System.View;
 
 namespace Restaurant_Management_System
@@ -82,6 +83,12 @@ namespace Restaurant_Management_System
         private void btnFoodItems_Click(object sender, EventArgs e)
         {
             Add_Controls(new frmFoodItemView());
+        }
+
+        private void btnPayment_Click(object sender, EventArgs e)
+        {
+            frmPOS frm = new frmPOS();
+            frm.Show();
         }
     }
 }

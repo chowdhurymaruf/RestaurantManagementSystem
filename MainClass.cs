@@ -13,7 +13,7 @@ namespace Restaurant_Management_System
 {
      class MainClass
     {
-        public static readonly string con_string = @"Data Source=MARUF\SQLEXPRESS; Initial Catalog=Restaurant Management System; Integrated Security=True;";
+        public static readonly string con_string = @"Data Source=RAUFIS-PC\SQLEXPRESS\SQLEXPRESS; Initial Catalog=Restaurant Management System; Integrated Security=True;";
         public static SqlConnection con = new SqlConnection(con_string);
 
         public static bool isValidUser(string user, string pass)
