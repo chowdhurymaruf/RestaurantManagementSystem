@@ -206,29 +206,36 @@ namespace Restaurant_Management_System.Model
         {
             // need to create a form for table and waiter selection
             frmTableSelect frm = new frmTableSelect();
-            if (frm.TableName != "")
+            if (frm.ShowDialog() == DialogResult.OK)
             {
-                lblTable.Text = frm.TableName;
-                
-            }
+                if (frm.TableName != "")
+                {
+                    lblTable.Text = frm.TableName;
 
-            else
-            {
-                lblTable.Text = "";
-               
+                }
+
+                else
+                {
+                    lblTable.Text = "";
+
+                }
             }
+                
 
             frmWaiterSelect frm2 = new frmWaiterSelect();
-            if (frm2.WaiterName != "")
+            if (frm2.ShowDialog() == DialogResult.OK)
             {
-                lblWaiter.Text = frm2.WaiterName;
+                if (frm2.WaiterName != "")
+                {
+                    lblWaiter.Text = frm2.WaiterName;
 
-            }
+                }
 
-            else
-            {
-                lblWaiter.Text = "";
+                else
+                {
+                    lblWaiter.Text = "";
 
+                }
             }
         }
     }
