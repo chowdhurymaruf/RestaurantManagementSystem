@@ -21,21 +21,21 @@ namespace Restaurant_Management_System.Model
 
 
         public int id { get; set; }
-    public string PPrice { get; set; }
+    public string fPrice { get; set; }
 
 
 
-    public string PCategory { get; set; }
+    public string fCategory { get; set; }
 
 
 
-    public string PName
+    public string fName
         {
             get { return lblName.Text; }
             set { lblName.Text = value; }
         }
 
-    public Image PImage
+    public Image fImage
         {
             get { return txtImage.Image; }
             set { txtImage.Image = value; }

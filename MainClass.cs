@@ -13,7 +13,7 @@ namespace Restaurant_Management_System
 {
      class MainClass
     {
-        public static readonly string con_string = @"Data Source=RAUFIS-PC\SQLEXPRESS\SQLEXPRESS; Initial Catalog=Restaurant Management System; Integrated Security=True;";
+        public static readonly string con_string = @"Data Source=MARUF\SQLEXPRESS; Initial Catalog=Restaurant Management System; Integrated Security=True;";
         public static SqlConnection con = new SqlConnection(con_string);
 
         public static bool isValidUser(string user, string pass)
@@ -81,6 +81,7 @@ namespace Restaurant_Management_System
 
         public static void LoadData(string qry, DataGridView gv, ListBox lb)
         {
+            gv.CellFormatting += new DataGridViewCellFormattingEventHandler(gv_CellFormatting);
             try
             {
                 SqlCommand cmd = new SqlCommand(qry, con);
@@ -92,8 +93,8 @@ namespace Restaurant_Management_System
                 for (int i = 0; i < lb.Items.Count; i++)
                 {
                     string colNam1 = ((DataGridViewColumn)lb.Items[i]).Name;
-                    gv.Columns[colNam1].DataPropertyName = dt.Columns[i].ColumnName;
-                    //gv.Columns[colNam1].DataPropertyName = dt.Columns[i].ToString();
+                    //gv.Columns[colNam1].DataPropertyName = dt.Columns[i].ColumnName;
+                    gv.Columns[colNam1].DataPropertyName = dt.Columns[i].ToString();
                 }
 
                 gv.DataSource = dt;
@@ -103,6 +104,31 @@ namespace Restaurant_Management_System
                 MessageBox.Show(ex.ToString());
                 con.Close();
             }
+        }
+
+        private static void gv_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            Guna.UI2.WinForms.Guna2DataGridView gv = (Guna.UI2.WinForms.Guna2DataGridView)sender;
+            int count = 0;
+
+            foreach(DataGridViewRow row in gv.Rows)
+            {
+                count++;
+                row.Cells[0].Value = count;
+            }
+            /*var dgv = sender as DataGridView;
+            if (dgv.Columns[e.ColumnIndex].Name == "dgvPrice")
+            {
+                if (e.Value != null)
+                {
+                    decimal d;
+                    if (decimal.TryParse(e.Value.ToString(), out d))
+                    {
+                        e.Value = d.ToString("0.00");
+                        e.FormattingApplied = true;
+                    }
+                }
+            }*/
         }
 
         //For ComboBox Fill
