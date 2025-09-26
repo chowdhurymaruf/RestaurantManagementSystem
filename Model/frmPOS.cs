@@ -20,6 +20,7 @@ namespace Restaurant_Management_System.Model
         }
         public int MainID = 0;
         public string OrderType;
+        public string WaiterName;
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -124,7 +125,6 @@ namespace Restaurant_Management_System.Model
             DataTable dt = new DataTable();
             da.Fill(dt);
 
-
             foreach (DataRow item in dt.Rows)
             {
                 Byte[] imagearray = (byte[])item["fImage"];
@@ -206,7 +206,6 @@ namespace Restaurant_Management_System.Model
         {
             // need to create a form for table and waiter selection
             frmTableSelect frm = new frmTableSelect();
-            MainClass.BlurBackground(frm);
             if (frm.TableName != "")
             {
                 lblTable.Text = frm.TableName;
@@ -220,10 +219,9 @@ namespace Restaurant_Management_System.Model
             }
 
             frmWaiterSelect frm2 = new frmWaiterSelect();
-            MainClass.BlurBackground(frm);
-            if (frm2.waiterName != "")
+            if (frm2.WaiterName != "")
             {
-                lblWaiter.Text = frm2.waiterName;
+                lblWaiter.Text = frm2.WaiterName;
 
             }
 
@@ -232,7 +230,6 @@ namespace Restaurant_Management_System.Model
                 lblWaiter.Text = "";
 
             }
-            
         }
     }
 }
