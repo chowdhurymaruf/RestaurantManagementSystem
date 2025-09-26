@@ -123,6 +123,16 @@ namespace Restaurant_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_checked_identification_documents_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-checked-identification-documents-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_dog_house_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-dog-house-50", resourceCulture);

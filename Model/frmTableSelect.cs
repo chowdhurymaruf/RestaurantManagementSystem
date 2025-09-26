@@ -32,7 +32,7 @@ namespace Restaurant_Management_System.Model
             {
                 Guna.UI2.WinForms.Guna2Button b = new Guna.UI2.WinForms.Guna2Button();
                 b.Text = row["tname"].ToString();
-                b.Width = 510;
+                b.Width = 150;
                 b.Height = 50;
                 b.FillColor = Color.FromArgb(241, 85, 126);
                 b.HoverState.FillColor = Color.FromArgb(50, 55, 89);

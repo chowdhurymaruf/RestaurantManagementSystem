@@ -297,6 +297,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Guna.UI2.dll" />
+    <None Include="Resources\icons8-checked-identification-documents-100.png" />
     <None Include="Resources\icons8-shutdown-100.png" />
     <None Include="Resources\icons8-new-ticket-100.png" />
     <None Include="Resources\icons8-hold-100.png" />

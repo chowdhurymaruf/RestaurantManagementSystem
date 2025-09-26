@@ -41,7 +41,7 @@ namespace Restaurant_Management_System.Model
 
         private void frmWaiterSelect_Load(object sender, EventArgs e)
         {
-            string qry = "select * from tables ";
+            string qry = "select * from staff where sRole Like 'Waiter' ";
             SqlCommand cmd = new SqlCommand(qry, MainClass.con);
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -50,8 +50,8 @@ namespace Restaurant_Management_System.Model
             foreach (DataRow row in dt.Rows)
             {
                 Guna.UI2.WinForms.Guna2Button b = new Guna.UI2.WinForms.Guna2Button();
-                b.Text = row["tname"].ToString();
-                b.Width = 510;
+                b.Text = row["sName"].ToString();
+                b.Width = 150;
                 b.Height = 50;
                 b.FillColor = Color.FromArgb(241, 85, 126);
                 b.HoverState.FillColor = Color.FromArgb(50, 55, 89);

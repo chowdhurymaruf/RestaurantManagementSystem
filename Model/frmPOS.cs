@@ -205,6 +205,34 @@ namespace Restaurant_Management_System.Model
         private void btnDineIn_Click(object sender, EventArgs e)
         {
             // need to create a form for table and waiter selection
+            frmTableSelect frm = new frmTableSelect();
+            MainClass.BlurBackground(frm);
+            if (frm.TableName != "")
+            {
+                lblTable.Text = frm.TableName;
+                
+            }
+
+            else
+            {
+                lblTable.Text = "";
+               
+            }
+
+            frmWaiterSelect frm2 = new frmWaiterSelect();
+            MainClass.BlurBackground(frm);
+            if (frm2.waiterName != "")
+            {
+                lblWaiter.Text = frm2.waiterName;
+
+            }
+
+            else
+            {
+                lblWaiter.Text = "";
+
+            }
+            
         }
     }
 }
