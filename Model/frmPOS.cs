@@ -18,7 +18,8 @@ namespace Restaurant_Management_System.Model
         {
             InitializeComponent();
         }
-
+        public int MainID = 0;
+        public string OrderType;
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -66,6 +67,13 @@ namespace Restaurant_Management_System.Model
         {
             //throw new NotImplementedException();
             Guna.UI2.WinForms.Guna2Button b = (Guna.UI2.WinForms.Guna2Button)sender;
+            if (b.Text == "All Categories")
+            {
+                txtSearch.Text = "1";
+                txtSearch.Text = "";
+                return;
+            }
+            
             foreach (var item in ProductPanel.Controls)
             {
                 var pro = (ucProduct)item;
@@ -128,6 +136,14 @@ namespace Restaurant_Management_System.Model
         }
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
+            foreach (var item in CategoryPanel.Controls)
+            {
+                if (item is Guna.UI2.WinForms.Guna2Button)
+                {
+                    Guna.UI2.WinForms.Guna2Button b = (Guna.UI2.WinForms.Guna2Button)item;
+                    b.Checked = false;
+                }
+            }
             foreach (var item in ProductPanel.Controls)
             {
                 var pro = (ucProduct)item;
@@ -155,6 +171,40 @@ namespace Restaurant_Management_System.Model
             }
 
             lblTotal.Text = tot.ToString("N2");
+        }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            lblTable.Text = "";
+            lblWaiter.Text = "";
+            lblTable.Visible = false;
+            lblWaiter.Visible = false;
+            guna2DataGridView1.Rows.Clear();
+            MainID = 0;
+            lblTotal.Text = "00";
+        }
+
+        private void btnDelivery_Click(object sender, EventArgs e)
+        {
+            lblTable.Text = "";
+            lblWaiter.Text = "";
+            lblTable.Visible = false;
+            lblWaiter.Visible = false;
+            OrderType = "Delivery";
+        }
+
+        private void btnTakeAway_Click(object sender, EventArgs e)
+        {
+            lblTable.Text = "";
+            lblWaiter.Text = "";
+            lblTable.Visible = false;
+            lblWaiter.Visible = false;
+            OrderType = "Take Away";
+        }
+
+        private void btnDineIn_Click(object sender, EventArgs e)
+        {
+            // need to create a form for table and waiter selection
         }
     }
 }
