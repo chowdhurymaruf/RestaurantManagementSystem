@@ -18,7 +18,7 @@ namespace Restaurant_Management_System.Model
             InitializeComponent();
         }
 
-        public string TableName;
+        public string TableName { get; set; }
 
         private void frmTableSelect_Load(object sender, EventArgs e)
         {
@@ -39,11 +39,13 @@ namespace Restaurant_Management_System.Model
 
                 //event for click
                 b.Click += new EventHandler(b_Click);
+                flowLayoutPanel1.Controls.Add(b);
             }
         }
         private void b_Click(object sender, EventArgs e)
         {
             TableName = (sender as Guna.UI2.WinForms.Guna2Button).Text.ToString();
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
     }

@@ -18,7 +18,7 @@ namespace Restaurant_Management_System.Model
             InitializeComponent();
         }
 
-        public string WaiterName;
+        public string WaiterName { get; set; }
         private void guna2Panel2_Paint(object sender, PaintEventArgs e)
         {
 
@@ -58,12 +58,14 @@ namespace Restaurant_Management_System.Model
 
                 //event for click
                 b.Click += new EventHandler(b_Click);
+                flowLayoutPanel1.Controls.Add(b);
             }
         }
 
         private void b_Click(object sender, EventArgs e)
         {
             WaiterName = (sender as Guna.UI2.WinForms.Guna2Button).Text.ToString();
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
     }

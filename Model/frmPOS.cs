@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,7 +19,7 @@ namespace Restaurant_Management_System.Model
         {
             InitializeComponent();
         }
-        public int MainID = 0;
+        public int order_id = 0;
         public string OrderType;
         public string WaiterName;
         private void btnExit_Click(object sender, EventArgs e)
@@ -46,13 +47,13 @@ namespace Restaurant_Management_System.Model
 
             if (dt.Rows.Count > 0)
             {
-                foreach (DataRow row  in dt.Rows)
+                foreach (DataRow row in dt.Rows)
                 {
                     Guna.UI2.WinForms.Guna2Button b = new Guna.UI2.WinForms.Guna2Button();
                     b.FillColor = Color.FromArgb(50, 55, 89);
                     b.Size = new Size(134, 45);
                     b.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-                    b.Text = row ["catName"].ToString();
+                    b.Text = row["catName"].ToString();
 
                     //event for click
                     b.Click += new EventHandler(b_Click);
@@ -74,7 +75,7 @@ namespace Restaurant_Management_System.Model
                 txtSearch.Text = "";
                 return;
             }
-            
+
             foreach (var item in ProductPanel.Controls)
             {
                 var pro = (ucProduct)item;
@@ -82,7 +83,7 @@ namespace Restaurant_Management_System.Model
             }
         }
 
-        private void AddItems(string id, string name, string cat, string price,Image fImage)
+        private void AddItems(string id, String pro_id, string name, string cat, string price, Image fImage)
         {
             var w = new ucProduct()
             {
@@ -90,7 +91,7 @@ namespace Restaurant_Management_System.Model
                 fPrice = price,
                 fCategory = cat,
                 fImage = fImage,
-                id = Convert.ToInt32(id)
+                id = Convert.ToInt32(pro_id)
             };
 
             ProductPanel.Controls.Add(w);
@@ -102,17 +103,17 @@ namespace Restaurant_Management_System.Model
                 foreach (DataGridViewRow item in guna2DataGridView1.Rows)
                 {
                     // this will check if the item is already in the cart
-                    if (Convert.ToInt32(item.Cells["dgvId"].Value) == wdg.id)
+                    if (Convert.ToInt32(item.Cells["dgvpro_id"].Value) == wdg.id)
                     {
-                        item.Cells["dgvQty"].Value = int.Parse(item.Cells["dgvQty"].Value.ToString()) + 1 ;
-                        item.Cells["dgvAmount"].Value = int.Parse(item.Cells["dgvQty"].Value.ToString()) * 
+                        item.Cells["dgvQty"].Value = int.Parse(item.Cells["dgvQty"].Value.ToString()) + 1;
+                        item.Cells["dgvAmount"].Value = int.Parse(item.Cells["dgvQty"].Value.ToString()) *
                         double.Parse(item.Cells["dgvPrice"].Value.ToString());
 
                         return;
                     }
                 }
-                //this line will add new item to the cart
-                guna2DataGridView1.Rows.Add(new object[] { 0, wdg.id, wdg.fName, 1, wdg.fPrice, wdg.fPrice });
+                //this line will add new item to the cart and 2nd 0 from id
+                guna2DataGridView1.Rows.Add(new object[] { 0, 0, wdg.id, wdg.fName, 1, wdg.fPrice, wdg.fPrice });
                 GetTotal();
             };
         }
@@ -129,10 +130,10 @@ namespace Restaurant_Management_System.Model
             {
                 Byte[] imagearray = (byte[])item["fImage"];
                 byte[] imagebytearray = imagearray;
-                AddItems(item["fId"].ToString(), item["fName"].ToString(), item["catName"].ToString(),
+                AddItems("0", item["fId"].ToString(), item["fName"].ToString(), item["catName"].ToString(),
                     item["fPrice"].ToString(), Image.FromStream(new MemoryStream(imagearray)));
             }
-            
+
         }
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
@@ -161,16 +162,17 @@ namespace Restaurant_Management_System.Model
                 row.Cells[0].Value = count;
             }
         }
+
+        private double currentTotal = 0;
         private void GetTotal()
         {
-            double tot = 0;
-            lblTotal.Text = "";
+            currentTotal = 0;
             foreach (DataGridViewRow item in guna2DataGridView1.Rows)
             {
-                tot += double.Parse(item.Cells["dgvAmount"].Value.ToString());
+                currentTotal += Convert.ToDouble(item.Cells["dgvAmount"].Value);
             }
 
-            lblTotal.Text = tot.ToString("N2");
+            lblTotal.Text = currentTotal.ToString("N2");
         }
 
         private void btnNew_Click(object sender, EventArgs e)
@@ -180,7 +182,7 @@ namespace Restaurant_Management_System.Model
             lblTable.Visible = false;
             lblWaiter.Visible = false;
             guna2DataGridView1.Rows.Clear();
-            MainID = 0;
+            order_id = 0;
             lblTotal.Text = "00";
         }
 
@@ -204,6 +206,7 @@ namespace Restaurant_Management_System.Model
 
         private void btnDineIn_Click(object sender, EventArgs e)
         {
+            OrderType = "Dine In";
             // need to create a form for table and waiter selection
             frmTableSelect frm = new frmTableSelect();
             if (frm.ShowDialog() == DialogResult.OK)
@@ -211,16 +214,16 @@ namespace Restaurant_Management_System.Model
                 if (frm.TableName != "")
                 {
                     lblTable.Text = frm.TableName;
-
+                    lblTable.Visible = true;
                 }
 
                 else
                 {
                     lblTable.Text = "";
-
+                    lblTable.Visible = false;
                 }
             }
-                
+
 
             frmWaiterSelect frm2 = new frmWaiterSelect();
             if (frm2.ShowDialog() == DialogResult.OK)
@@ -228,15 +231,136 @@ namespace Restaurant_Management_System.Model
                 if (frm2.WaiterName != "")
                 {
                     lblWaiter.Text = frm2.WaiterName;
-
+                    lblWaiter.Visible = true;
                 }
 
                 else
                 {
                     lblWaiter.Text = "";
+                    lblWaiter.Visible = false;
 
                 }
             }
         }
-    }
+
+        private void btnKot_Click(object sender, EventArgs e)
+        {
+            //Save the data to the database
+            //create tables
+
+            string qry1 = ""; //for order table
+            string qry2 = ""; // for orderDetails table
+
+            //int order_id = 0;
+            int order_item_id = 0;
+
+
+            if (order_id == 0) //insert
+            {
+                qry1 = @"insert into orders (aDate, aTime, orderType, TableName, WaiterName, total, status) 
+                         values (@aDate, @aTime, @orderType, @TableName, @WaiterName, @Total, @Status); Select SCOPE_IDENTITY()";
+            }
+
+            else // update
+            {
+                qry1 = @"update orders set Status = @Status, Total = @Total, where order_id = @ID";
+            }
+
+            
+            SqlCommand cmd = new SqlCommand(qry1, MainClass.con);
+            cmd.Parameters.AddWithValue("@ID", order_id);
+            cmd.Parameters.AddWithValue("@aDate",Convert.ToDateTime(DateTime.Now.Date));  //ToString("yyyy-MM-dd"));
+            cmd.Parameters.AddWithValue("@aTime", DateTime.Now.ToShortTimeString());  //ToString("hh:mm:ss tt"));
+            cmd.Parameters.AddWithValue("@TableName", lblTable.Text);
+            cmd.Parameters.AddWithValue("@WaiterName", lblWaiter.Text);
+            cmd.Parameters.AddWithValue("@Status", "Pending");
+            cmd.Parameters.AddWithValue("@orderType", OrderType);
+            cmd.Parameters.AddWithValue("@Total", Convert.ToDouble(lblTotal.Text));// as we only saving data for kitchen value will update when payment recevied
+            
+            /*
+            SqlCommand cmd = new SqlCommand(qry1, MainClass.con);
+            cmd.Parameters.Add("@ID", SqlDbType.Int).Value = order_id;
+            cmd.Parameters.Add("@aDate", SqlDbType.Date).Value = DateTime.Now.Date;
+            cmd.Parameters.Add("@aTime", SqlDbType.VarChar, 15).Value = DateTime.Now.ToShortTimeString();
+            cmd.Parameters.Add("@TableName", SqlDbType.VarChar, 10).Value = lblTable.Text;
+            cmd.Parameters.Add("@WaiterName", SqlDbType.VarChar, 15).Value = lblWaiter.Text;
+            cmd.Parameters.Add("@Status", SqlDbType.VarChar, 15).Value = "Pending";
+            cmd.Parameters.Add("@orderType", SqlDbType.VarChar, 15).Value = OrderType;
+
+            // Convert lblTotal.Text safely to float
+            cmd.Parameters.Add("@Total", SqlDbType.Float).Value = currentTotal;
+            */
+            if (MainClass.con.State == ConnectionState.Closed)
+            {
+                MainClass.con.Open();
+            }
+            if (order_id == 0)
+            {
+                order_id = Convert.ToInt32(cmd.ExecuteScalar());
+            }
+            else
+            {
+                cmd.ExecuteNonQuery();
+            }
+            if (MainClass.con.State == ConnectionState.Open)
+            {
+                MainClass.con.Close();
+            }
+            foreach (DataGridViewRow row in guna2DataGridView1.Rows)
+            {
+                order_item_id = Convert.ToInt32(row.Cells["dgvId"].Value);
+
+                if (order_item_id == 0)
+                {
+                    qry2 = "insert into order_item values ( @order_id, @proID, @quantity, @price, @subtotal)";
+                }
+                else
+                {
+                    qry2 = "update order_item set proID = @proID, quantity = @quantity, " +
+                        "price = @price, subtotal = @subtotal where order_item_id = @order_item_id where order_item_id = @order_item_id";
+                }
+                
+                SqlCommand cmd2 = new SqlCommand(qry2, MainClass.con);
+                cmd2.Parameters.AddWithValue("@ID", order_item_id);
+                cmd2.Parameters.AddWithValue("@order_id", order_id);
+                cmd2.Parameters.AddWithValue("@proID", Convert.ToInt32( row.Cells["dgvpro_id"].Value));
+                cmd2.Parameters.AddWithValue("@quantity", Convert.ToInt32( row.Cells["dgvQty"].Value));
+                cmd2.Parameters.AddWithValue("@price", Convert.ToDouble(row.Cells["dgvPrice"].Value));
+                cmd2.Parameters.AddWithValue("@subtotal", Convert.ToDouble(row.Cells["dgvAmount"].Value));
+                
+                /*
+                SqlCommand cmd2 = new SqlCommand(qry2, MainClass.con);
+                cmd2.Parameters.Add("@ID", SqlDbType.Int).Value = order_item_id;
+                cmd2.Parameters.Add("@order_id", SqlDbType.Int).Value = order_id;
+                cmd2.Parameters.Add("@proID", SqlDbType.Int).Value = Convert.ToInt32(row.Cells["dgvpro_id"].Value);
+                cmd2.Parameters.Add("@quantity", SqlDbType.Int).Value = Convert.ToInt32(row.Cells["dgvQty"].Value);
+
+                // price & subtotal must be float
+                cmd2.Parameters.Add("@price", SqlDbType.Float).Value = Convert.ToDouble(row.Cells["dgvPrice"].Value);
+                cmd2.Parameters.Add("@subtotal", SqlDbType.Float).Value = Convert.ToDouble(row.Cells["dgvAmount"].Value);
+                */
+
+                if (MainClass.con.State == ConnectionState.Closed)
+                {
+                    MainClass.con.Open();
+                }
+                cmd2.ExecuteNonQuery();
+
+                if (MainClass.con.State == ConnectionState.Open)
+                {
+                    MainClass.con.Close();
+                }
+
+                guna2MessageDialog1.Show ("Order has been placed successfully");
+                order_id = 0;
+                order_item_id = 0;
+                guna2DataGridView1.Rows.Clear();
+                lblTable.Text = "";
+                lblWaiter.Text = "";
+                lblTable.Visible = false;
+                lblWaiter.Visible = false;
+                lblTotal.Text = "00";
+            }
+        }
+    }          
 }
