@@ -90,5 +90,10 @@ namespace Restaurant_Management_System
             frmPOS frm = new frmPOS();
             frm.Show();
         }
+
+        private void btnKitchen_Click(object sender, EventArgs e)
+        {
+            Add_Controls(new frmKitchenView());
+        }
     }
 }
