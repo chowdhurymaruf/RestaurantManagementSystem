@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFoodItemAdd));
             this.cbCat = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtPrice = new Guna.UI2.WinForms.Guna2TextBox();
@@ -43,26 +42,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtImage)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnSave
-            // 
-            this.btnSave.CustomizableEdges.TopRight = false;
-            this.btnSave.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            // 
-            // label1
-            // 
-            this.label1.Size = new System.Drawing.Size(141, 32);
-            this.label1.Text = "Item Details";
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageFlip = Guna.UI2.WinForms.Enums.FlipOrientation.Normal;
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            // 
             // btnClose
             // 
             this.btnClose.CustomizableEdges.TopRight = false;
@@ -71,6 +50,28 @@
             this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClose.FillColor = System.Drawing.Color.Red;
+            // 
+            // btnSave
+            // 
+            this.btnSave.CustomizableEdges.TopRight = false;
+            this.btnSave.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
+            // 
+            // label1
+            // 
+            this.label1.Size = new System.Drawing.Size(141, 32);
+            this.label1.Text = "Item Details";
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = global::Restaurant_Management_System.Properties.Resources.icons8_fast_food_64__2_;
+            this.guna2PictureBox1.ImageFlip = Guna.UI2.WinForms.Enums.FlipOrientation.Normal;
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             // 
             // guna2Panel1
             // 
@@ -78,6 +79,7 @@
             // 
             // guna2Panel2
             // 
+            this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
             this.guna2Panel2.Size = new System.Drawing.Size(809, 112);
             // 
             // cbCat
@@ -170,7 +172,7 @@
             // 
             // txtImage
             // 
-            this.txtImage.Image = global::Restaurant_Management_System.Properties.Resources.browse_Icon;
+            this.txtImage.Image = global::Restaurant_Management_System.Properties.Resources.icons8_search_in_browser_100;
             this.txtImage.ImageRotate = 0F;
             this.txtImage.Location = new System.Drawing.Point(602, 133);
             this.txtImage.Name = "txtImage";

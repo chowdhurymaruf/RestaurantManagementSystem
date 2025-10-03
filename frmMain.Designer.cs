@@ -49,7 +49,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
             this.panel1.Controls.Add(this.btnKitchen);
             this.panel1.Controls.Add(this.btnPayment);
             this.panel1.Controls.Add(this.btnStaff);
@@ -72,7 +72,7 @@
             this.btnKitchen.AutoRoundedCorners = true;
             this.btnKitchen.BorderRadius = 31;
             this.btnKitchen.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnKitchen.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(85)))), ((int)(((byte)(126)))));
+            this.btnKitchen.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
             this.btnKitchen.CheckedState.Image = global::Restaurant_Management_System.Properties.Resources.icons8_kitchen_96__1_;
             this.btnKitchen.CustomizableEdges.BottomRight = false;
             this.btnKitchen.CustomizableEdges.TopRight = false;
@@ -83,10 +83,10 @@
             this.btnKitchen.FillColor = System.Drawing.Color.Transparent;
             this.btnKitchen.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKitchen.ForeColor = System.Drawing.Color.White;
-            this.btnKitchen.Image = global::Restaurant_Management_System.Properties.Resources.icons8_kitchen_96;
+            this.btnKitchen.Image = global::Restaurant_Management_System.Properties.Resources.icons8_kitchen_96__1_;
             this.btnKitchen.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnKitchen.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnKitchen.Location = new System.Drawing.Point(86, 642);
+            this.btnKitchen.Location = new System.Drawing.Point(86, 648);
             this.btnKitchen.Margin = new System.Windows.Forms.Padding(2);
             this.btnKitchen.Name = "btnKitchen";
             this.btnKitchen.Size = new System.Drawing.Size(186, 64);
@@ -101,7 +101,7 @@
             this.btnPayment.AutoRoundedCorners = true;
             this.btnPayment.BorderRadius = 31;
             this.btnPayment.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnPayment.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(85)))), ((int)(((byte)(126)))));
+            this.btnPayment.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
             this.btnPayment.CheckedState.Image = global::Restaurant_Management_System.Properties.Resources.icons8_payment_100__1_;
             this.btnPayment.CustomizableEdges.BottomRight = false;
             this.btnPayment.CustomizableEdges.TopRight = false;
@@ -112,10 +112,10 @@
             this.btnPayment.FillColor = System.Drawing.Color.Transparent;
             this.btnPayment.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPayment.ForeColor = System.Drawing.Color.White;
-            this.btnPayment.Image = global::Restaurant_Management_System.Properties.Resources.icons8_payment_100;
+            this.btnPayment.Image = global::Restaurant_Management_System.Properties.Resources.icons8_payment_100__1_;
             this.btnPayment.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnPayment.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnPayment.Location = new System.Drawing.Point(86, 572);
+            this.btnPayment.Location = new System.Drawing.Point(86, 580);
             this.btnPayment.Margin = new System.Windows.Forms.Padding(2);
             this.btnPayment.Name = "btnPayment";
             this.btnPayment.Size = new System.Drawing.Size(186, 64);
@@ -130,7 +130,7 @@
             this.btnStaff.AutoRoundedCorners = true;
             this.btnStaff.BorderRadius = 31;
             this.btnStaff.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnStaff.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(85)))), ((int)(((byte)(126)))));
+            this.btnStaff.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
             this.btnStaff.CheckedState.Image = global::Restaurant_Management_System.Properties.Resources.icons8_staff_50;
             this.btnStaff.CustomizableEdges.BottomRight = false;
             this.btnStaff.CustomizableEdges.TopRight = false;
@@ -141,7 +141,7 @@
             this.btnStaff.FillColor = System.Drawing.Color.Transparent;
             this.btnStaff.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStaff.ForeColor = System.Drawing.Color.White;
-            this.btnStaff.Image = global::Restaurant_Management_System.Properties.Resources.icons8_staff_100;
+            this.btnStaff.Image = global::Restaurant_Management_System.Properties.Resources.icons8_staff_50;
             this.btnStaff.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnStaff.ImageOffset = new System.Drawing.Point(10, 0);
             this.btnStaff.Location = new System.Drawing.Point(86, 512);
@@ -159,7 +159,7 @@
             this.btnTables.AutoRoundedCorners = true;
             this.btnTables.BorderRadius = 31;
             this.btnTables.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnTables.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(85)))), ((int)(((byte)(126)))));
+            this.btnTables.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
             this.btnTables.CheckedState.Image = global::Restaurant_Management_System.Properties.Resources.icons8_side_table_64__1_1;
             this.btnTables.CustomizableEdges.BottomRight = false;
             this.btnTables.CustomizableEdges.TopRight = false;
@@ -170,7 +170,7 @@
             this.btnTables.FillColor = System.Drawing.Color.Transparent;
             this.btnTables.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTables.ForeColor = System.Drawing.Color.White;
-            this.btnTables.Image = global::Restaurant_Management_System.Properties.Resources.icons8_side_table_64;
+            this.btnTables.Image = global::Restaurant_Management_System.Properties.Resources.icons8_side_table_64__1_;
             this.btnTables.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnTables.ImageOffset = new System.Drawing.Point(10, 0);
             this.btnTables.Location = new System.Drawing.Point(86, 442);
@@ -188,7 +188,7 @@
             this.btnFoodItems.AutoRoundedCorners = true;
             this.btnFoodItems.BorderRadius = 31;
             this.btnFoodItems.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnFoodItems.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(85)))), ((int)(((byte)(126)))));
+            this.btnFoodItems.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
             this.btnFoodItems.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             this.btnFoodItems.CustomizableEdges.BottomRight = false;
             this.btnFoodItems.CustomizableEdges.TopRight = false;
@@ -199,7 +199,7 @@
             this.btnFoodItems.FillColor = System.Drawing.Color.Transparent;
             this.btnFoodItems.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.btnFoodItems.ForeColor = System.Drawing.Color.White;
-            this.btnFoodItems.Image = ((System.Drawing.Image)(resources.GetObject("btnFoodItems.Image")));
+            this.btnFoodItems.Image = global::Restaurant_Management_System.Properties.Resources.icons8_fast_food_64__2_;
             this.btnFoodItems.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnFoodItems.ImageOffset = new System.Drawing.Point(10, 0);
             this.btnFoodItems.Location = new System.Drawing.Point(86, 372);
@@ -207,7 +207,7 @@
             this.btnFoodItems.Name = "btnFoodItems";
             this.btnFoodItems.Size = new System.Drawing.Size(186, 64);
             this.btnFoodItems.TabIndex = 4;
-            this.btnFoodItems.Text = "Food Items";
+            this.btnFoodItems.Text = "Menu Items";
             this.btnFoodItems.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnFoodItems.TextOffset = new System.Drawing.Point(20, 0);
             this.btnFoodItems.Click += new System.EventHandler(this.btnFoodItems_Click);
@@ -217,7 +217,7 @@
             this.btnCategory.AutoRoundedCorners = true;
             this.btnCategory.BorderRadius = 31;
             this.btnCategory.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnCategory.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(85)))), ((int)(((byte)(126)))));
+            this.btnCategory.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
             this.btnCategory.CheckedState.Image = global::Restaurant_Management_System.Properties.Resources.icons8_categories_64__1_;
             this.btnCategory.CustomizableEdges.BottomRight = false;
             this.btnCategory.CustomizableEdges.TopRight = false;
@@ -226,9 +226,9 @@
             this.btnCategory.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCategory.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnCategory.FillColor = System.Drawing.Color.Transparent;
-            this.btnCategory.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCategory.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.btnCategory.ForeColor = System.Drawing.Color.White;
-            this.btnCategory.Image = global::Restaurant_Management_System.Properties.Resources.icons8_categories_64;
+            this.btnCategory.Image = global::Restaurant_Management_System.Properties.Resources.icons8_categories_64__1_;
             this.btnCategory.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCategory.ImageOffset = new System.Drawing.Point(10, 0);
             this.btnCategory.Location = new System.Drawing.Point(86, 302);
@@ -246,7 +246,7 @@
             this.btnHome.AutoRoundedCorners = true;
             this.btnHome.BorderRadius = 31;
             this.btnHome.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnHome.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(85)))), ((int)(((byte)(126)))));
+            this.btnHome.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
             this.btnHome.CheckedState.Image = global::Restaurant_Management_System.Properties.Resources.icons8_dog_house_50;
             this.btnHome.CustomizableEdges.BottomRight = false;
             this.btnHome.CustomizableEdges.TopRight = false;
@@ -257,7 +257,7 @@
             this.btnHome.FillColor = System.Drawing.Color.Transparent;
             this.btnHome.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.Image = global::Restaurant_Management_System.Properties.Resources.icons8_home_50;
+            this.btnHome.Image = global::Restaurant_Management_System.Properties.Resources.icons8_home_100;
             this.btnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnHome.ImageOffset = new System.Drawing.Point(10, 0);
             this.btnHome.Location = new System.Drawing.Point(86, 232);
@@ -285,11 +285,11 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Restaurant_Management_System.Properties.Resources.icons8_restaurant_100;
-            this.pictureBox1.Location = new System.Drawing.Point(86, 29);
+            this.pictureBox1.Image = global::Restaurant_Management_System.Properties.Resources.icons8_restaurant_building_100;
+            this.pictureBox1.Location = new System.Drawing.Point(76, 29);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(110, 98);
+            this.pictureBox1.Size = new System.Drawing.Size(129, 110);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;

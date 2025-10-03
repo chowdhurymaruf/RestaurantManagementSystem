@@ -65,15 +65,11 @@
             // 
             this.btnLogin.AutoRoundedCorners = true;
             this.btnLogin.BorderRadius = 25;
-            this.btnLogin.CheckedState.Parent = this.btnLogin;
-            this.btnLogin.CustomImages.Parent = this.btnLogin;
             this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(85)))), ((int)(((byte)(26)))));
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.HoverState.Parent = this.btnLogin;
             this.btnLogin.Location = new System.Drawing.Point(53, 404);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.ShadowDecoration.Parent = this.btnLogin;
             this.btnLogin.Size = new System.Drawing.Size(116, 52);
             this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Login";
@@ -84,20 +80,19 @@
             this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel1.Controls.Add(this.label3);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(365, 223);
             this.guna2Panel1.TabIndex = 8;
             // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = global::Restaurant_Management_System.Properties.Resources.user_128;
+            this.guna2PictureBox1.Image = global::Restaurant_Management_System.Properties.Resources.icons8_user_icon_100;
+            this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(120, 26);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
             this.guna2PictureBox1.Size = new System.Drawing.Size(122, 131);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 3;
@@ -121,19 +116,16 @@
             this.txtUser.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUser.DisabledState.Parent = this.txtUser;
             this.txtUser.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtUser.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUser.FocusedState.Parent = this.txtUser;
+            this.txtUser.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUser.HoverState.Parent = this.txtUser;
             this.txtUser.Location = new System.Drawing.Point(53, 284);
             this.txtUser.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtUser.Name = "txtUser";
             this.txtUser.PasswordChar = '\0';
             this.txtUser.PlaceholderText = "";
             this.txtUser.SelectedText = "";
-            this.txtUser.ShadowDecoration.Parent = this.txtUser;
             this.txtUser.Size = new System.Drawing.Size(267, 39);
             this.txtUser.TabIndex = 0;
             // 
@@ -144,19 +136,16 @@
             this.txtPass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPass.DisabledState.Parent = this.txtPass;
             this.txtPass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPass.FocusedState.Parent = this.txtPass;
+            this.txtPass.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPass.HoverState.Parent = this.txtPass;
             this.txtPass.Location = new System.Drawing.Point(53, 356);
             this.txtPass.Margin = new System.Windows.Forms.Padding(4, 9, 4, 9);
             this.txtPass.Name = "txtPass";
-            this.txtPass.PasswordChar = '\0';
+            this.txtPass.PasswordChar = '●';
             this.txtPass.PlaceholderText = "";
             this.txtPass.SelectedText = "";
-            this.txtPass.ShadowDecoration.Parent = this.txtPass;
             this.txtPass.Size = new System.Drawing.Size(267, 36);
             this.txtPass.TabIndex = 1;
             this.txtPass.UseSystemPasswordChar = true;
@@ -165,15 +154,11 @@
             // 
             this.btnExit.AutoRoundedCorners = true;
             this.btnExit.BorderRadius = 25;
-            this.btnExit.CheckedState.Parent = this.btnExit;
-            this.btnExit.CustomImages.Parent = this.btnExit;
             this.btnExit.FillColor = System.Drawing.Color.Red;
             this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.HoverState.Parent = this.btnExit;
             this.btnExit.Location = new System.Drawing.Point(198, 404);
             this.btnExit.Name = "btnExit";
-            this.btnExit.ShadowDecoration.Parent = this.btnExit;
             this.btnExit.Size = new System.Drawing.Size(122, 52);
             this.btnExit.TabIndex = 3;
             this.btnExit.Text = "Exit";

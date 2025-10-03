@@ -118,29 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnAdd.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAAAyFJREFUeF7tnUtu1EAURSMQLK/LEQR2wDbaZsJHbIApX4kFQfiEPdjNmEbVEQOO
-        A8qt6kjviXukMz2+/SLSYeSTE2OMMcYYY4xJwP5se3dXxodLmd4tw3i+DOOPZZj2/7f1BuN5vcluePyg
-        3oh3uxGWMt1bynSxHmT/sIzfls10yvsdjf3Zh9vLML1YPdj+2zI932+3t3jPbvzDaHcexme8ZxeHX1NX
-        PMgKlu3AuzZRv5wOvw/5ACs6fj/KF/3hr6lV3La4O53OeF+ZuYzvGbaNlukN7yuzlPHLKmwbHc95X5ml
-        TLt12DZZph3vK7OK2i55XxkGbZ+8rwyDtk/eV4ZB2yfvK8Og7ZP3lWHQ9sn7yjBo++R9ZRi0ffK+MgxG
-        M/teGQajmX2vDIPRzL5XhsFoZt8rw2A0s++VYTCa2ffKMBjN7HtlGIxm9r0yDEYz+14ZBqOZfa8Mg9HM
-        vleGwWhm3yvDYDSz75VhMJrZ98owGM3se2UYjGb2vTIMRjP7XhkGo5l9rwyD0cy+V4bBaGbfK8NgNLPv
-        lWEwmtn3yjDYKrvZ4OdplV0ZBltlNxv8PK2yK8Ngq+xmg5+nVXZlGGyV3Wzw87TKrgyD0cy+V4bBaGbf
-        K8NgNLPvlWEwmtn3yjAYzex7ZRiMZva9MgxGM/teGQajmX2vDIPRzL5XhsFoZt8rw2A0s++VYTCa2ffK
-        MBjN7HtlGIxm9r0yDEYz+14ZBqOZfa8Mg9HMvleGwWhm3yvDYDSz75VhMJrZ98owGM3se2UYjGb2vTIM
-        2j55XxkGbZ+8rwyDtk/eV4ZB2yfvK8Og7ZP3lWHQ9sn7yjBo++R9ZRi0ffK+Mn6hy1GdeV+ZpUyfrwjb
-        BucyfeJ9ZZZhfMuwbfYV7ytTX7R7Rdi2uNne531l9o9e3lmG6esqbjXLdHGUF0tW6luPVw+w13Yexp/z
-        ZrvhXbuobz3mg+z1nMv4hPfspr6Cur71mA+zf/fwL2OYnt7I67t/U9967O+Ua3j5htTC+90I9Yu+vmi3
-        vtu1/m3t/zxevsVzLuPHpYyv619T9Ua8mzHGGGOMMcZE5Beo3lfuLDhmEgAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="txtSearch.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAABZRJREFUaEPVWkmInFUQjlFwFzcQxQVEDyLuioqHHDQwkpmu9w+MHufgBi4RXA4K
+        DAAACwwBP0AiyAAABZRJREFUaEPVWkmInFUQjlFwFzcQxQVEDyLuioqHHDQwkpmu9w+MHufgBi4RXA4K
         5lV1NBriiFGMKEQD6sUFFMREPSRCROMhFyGXGMwIJhMyS7/XMwaNSUv9/c90vfp7+f/uv5P2g7p01av/
         1Xv1aptZtqxLHFy54ewq0L0VQ096wAln8D1v6ANn8B0P+FIV8MHKiL1GrxsIHBqz53jAh5yh7Q7wH2+o
         loEm2dAqlG/Q+k44+PS9QeuBZppsNDsBflOJ6A6t/4TARbTKGfwjtamAcN4b+t0D7XMGpxzQsbRMnZjn

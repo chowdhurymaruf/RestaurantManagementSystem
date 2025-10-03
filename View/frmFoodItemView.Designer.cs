@@ -52,12 +52,14 @@
             this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.IconLeft = global::Restaurant_Management_System.Properties.Resources.icons8_search_100;
             // 
             // btnAdd
             // 
             this.btnAdd.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnAdd.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnAdd.HoverState.ImageSize = new System.Drawing.Size(57, 57);
+            this.btnAdd.Image = global::Restaurant_Management_System.Properties.Resources.icons8_add_100__1_;
             this.btnAdd.ImageFlip = Guna.UI2.WinForms.Enums.FlipOrientation.Normal;
             this.btnAdd.PressedState.ImageSize = new System.Drawing.Size(55, 55);
             // 

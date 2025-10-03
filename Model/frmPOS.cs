@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -277,19 +278,6 @@ namespace Restaurant_Management_System.Model
             cmd.Parameters.AddWithValue("@orderType", OrderType);
             cmd.Parameters.AddWithValue("@Total", Convert.ToDouble(lblTotal.Text));// as we only saving data for kitchen value will update when payment recevied
             
-            /*
-            SqlCommand cmd = new SqlCommand(qry1, MainClass.con);
-            cmd.Parameters.Add("@ID", SqlDbType.Int).Value = order_id;
-            cmd.Parameters.Add("@aDate", SqlDbType.Date).Value = DateTime.Now.Date;
-            cmd.Parameters.Add("@aTime", SqlDbType.VarChar, 15).Value = DateTime.Now.ToShortTimeString();
-            cmd.Parameters.Add("@TableName", SqlDbType.VarChar, 10).Value = lblTable.Text;
-            cmd.Parameters.Add("@WaiterName", SqlDbType.VarChar, 15).Value = lblWaiter.Text;
-            cmd.Parameters.Add("@Status", SqlDbType.VarChar, 15).Value = "Pending";
-            cmd.Parameters.Add("@orderType", SqlDbType.VarChar, 15).Value = OrderType;
-
-            // Convert lblTotal.Text safely to float
-            cmd.Parameters.Add("@Total", SqlDbType.Float).Value = currentTotal;
-            */
             if (MainClass.con.State == ConnectionState.Closed)
             {
                 MainClass.con.Open();
@@ -328,18 +316,6 @@ namespace Restaurant_Management_System.Model
                 cmd2.Parameters.AddWithValue("@price", Convert.ToDouble(row.Cells["dgvPrice"].Value));
                 cmd2.Parameters.AddWithValue("@subtotal", Convert.ToDouble(row.Cells["dgvAmount"].Value));
                 
-                /*
-                SqlCommand cmd2 = new SqlCommand(qry2, MainClass.con);
-                cmd2.Parameters.Add("@ID", SqlDbType.Int).Value = order_item_id;
-                cmd2.Parameters.Add("@order_id", SqlDbType.Int).Value = order_id;
-                cmd2.Parameters.Add("@proID", SqlDbType.Int).Value = Convert.ToInt32(row.Cells["dgvpro_id"].Value);
-                cmd2.Parameters.Add("@quantity", SqlDbType.Int).Value = Convert.ToInt32(row.Cells["dgvQty"].Value);
-
-                // price & subtotal must be float
-                cmd2.Parameters.Add("@price", SqlDbType.Float).Value = Convert.ToDouble(row.Cells["dgvPrice"].Value);
-                cmd2.Parameters.Add("@subtotal", SqlDbType.Float).Value = Convert.ToDouble(row.Cells["dgvAmount"].Value);
-                */
-
                 if (MainClass.con.State == ConnectionState.Closed)
                 {
                     MainClass.con.Open();
@@ -361,6 +337,53 @@ namespace Restaurant_Management_System.Model
                 lblWaiter.Visible = false;
                 lblTotal.Text = "00";
             }
+        }
+
+        public int id = 0;
+        private void btnBill_Click(object sender, EventArgs e)
+        {
+            frmBillList frm = new frmBillList();
+            frm.ShowDialog();
+
+            if (frm.order_id > 0)
+            {
+                id = frm.order_id;
+                LoadEntries();
+            }
+        }
+
+        private void LoadEntries()
+        {
+            string qry = @"Select * from Orders o
+                                inner join order_item oi on o.order_id = oi.order_id
+                                inner join foodItems f on f.fID = oi.pro_id
+                                    where o.order_id = " + id + "";
+
+            SqlCommand cmd2 = new SqlCommand(qry, MainClass.con);
+            DataTable dt2 = new DataTable();
+            SqlDataAdapter da2 = new SqlDataAdapter(cmd2);
+            da2.Fill(dt2);
+            MessageBox.Show("Rows returned: " + dt2.Rows.Count.ToString());
+
+
+            guna2DataGridView1.Rows.Clear();
+            foreach(DataRow item in dt2.Rows)
+            {
+                string order_item_id = item["order_item_id"].ToString();
+                string proName = item["fName"].ToString();
+                string proID = item["pro_id"].ToString();
+                string quantity = item["quantity"].ToString();
+                string price = item["price"].ToString();
+                string subtotal = item["subtotal"].ToString();
+
+                object[] obj = {0, order_item_id, proID, proName, quantity, price, subtotal};
+                
+                guna2DataGridView1.Rows.Add(obj);
+            }
+        }
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }          
 }

@@ -69,7 +69,7 @@
             // 
             this.btnAdd.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btnAdd.HoverState.ImageSize = new System.Drawing.Size(57, 57);
-            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
+            this.btnAdd.Image = global::Restaurant_Management_System.Properties.Resources.icons8_add_100__1_;
             this.btnAdd.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnAdd.ImageRotate = 0F;
             this.btnAdd.ImageSize = new System.Drawing.Size(55, 55);
