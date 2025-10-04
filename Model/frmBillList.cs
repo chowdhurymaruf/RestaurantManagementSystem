@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
+using static TheArtOfDevHtmlRenderer.Adapters.RGraphicsPath;
 
 namespace Restaurant_Management_System.Model
 {
@@ -27,7 +29,11 @@ namespace Restaurant_Management_System.Model
 
         private void LoadData()
         {
-            string qry = @"select order_id, TableName, WaiterName, OrderType, Status, Total from Orders where Status = 'Pending' ";
+            //string qry = @"select order_id, TableName, WaiterName, OrderType, Status, Total from Orders where Status = 'Pending' ";
+
+            string qry = "SELECT o.order_id, o.TableName, o.WaiterName, o.orderType, o.Total, o.Status FROM Orders o ORDER BY o.aDate DESC, o.aTime DESC";
+
+            //string qry = "SELECT * FROM Orders WHERE Status IN ('Pending', 'Complete')";
 
             ListBox lb = new ListBox();
             lb.Items.Add(dgvId);

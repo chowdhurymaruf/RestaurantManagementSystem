@@ -57,6 +57,11 @@
             this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             // 
+            // label1
+            // 
+            this.label1.Size = new System.Drawing.Size(88, 32);
+            this.label1.Text = "Bill List";
+            // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.Image = global::Restaurant_Management_System.Properties.Resources.icons8_bill_1001;
@@ -80,7 +85,6 @@
             // guna2Panel2
             // 
             this.guna2Panel2.Controls.Add(this.guna2ControlBox1);
-            this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(61)))), ((int)(((byte)(204)))));
             this.guna2Panel2.Size = new System.Drawing.Size(835, 112);
             this.guna2Panel2.Controls.SetChildIndex(this.guna2PictureBox1, 0);
             this.guna2Panel2.Controls.SetChildIndex(this.label1, 0);

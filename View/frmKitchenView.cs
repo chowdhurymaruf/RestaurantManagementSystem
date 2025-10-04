@@ -27,7 +27,7 @@ namespace Restaurant_Management_System.View
         private void GetOrders()
         {
             flowLayoutPanel1.Controls.Clear();
-            string qry1 = @"Select * from Orders where status = 'pending' ";
+            string qry1 = @"Select * from Orders where status = 'Paid' ";
             SqlCommand cmd1 = new SqlCommand(qry1, MainClass.con);
             DataTable dt1 = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd1);
@@ -91,12 +91,7 @@ namespace Restaurant_Management_System.View
 
                 int mid = 0;
                 mid = Convert.ToInt32(dt1.Rows[i]["order_id"].ToString());
-                /*
-                string qry2 = @"Select * from tblMain m
-                                inner join tblDetails d on m.MainID
-                                inner join products p on p.pID = d.proID
-                                    where m.MainID = "+mid+"";
-                */
+                
                 string qry2 = @"Select * from Orders o
                                 inner join order_item oi on o.order_id = oi.order_id
                                 inner join foodItems f on f.fID = oi.pro_id
@@ -136,8 +131,6 @@ namespace Restaurant_Management_System.View
 
 
                 flowLayoutPanel1.Controls.Add(p1);
-
-
             }
         }
 

@@ -59,10 +59,7 @@ namespace Restaurant_Management_System.Model
                     //event for click
                     b.Click += new EventHandler(b_Click);
                     CategoryPanel.Controls.Add(b);
-
-
                 }
-
             }
         }
 
@@ -225,7 +222,6 @@ namespace Restaurant_Management_System.Model
                 }
             }
 
-
             frmWaiterSelect frm2 = new frmWaiterSelect();
             if (frm2.ShowDialog() == DialogResult.OK)
             {
@@ -255,7 +251,6 @@ namespace Restaurant_Management_System.Model
             //int order_id = 0;
             int order_item_id = 0;
 
-
             if (order_id == 0) //insert
             {
                 qry1 = @"insert into orders (aDate, aTime, orderType, TableName, WaiterName, total, status) 
@@ -264,7 +259,7 @@ namespace Restaurant_Management_System.Model
 
             else // update
             {
-                qry1 = @"update orders set Status = @Status, Total = @Total, where order_id = @ID";
+                qry1 = @"update orders set Status = @Status, Total = @Total where order_id = @ID"; // removed the comma
             }
 
             
@@ -294,6 +289,7 @@ namespace Restaurant_Management_System.Model
             {
                 MainClass.con.Close();
             }
+            /*
             foreach (DataGridViewRow row in guna2DataGridView1.Rows)
             {
                 order_item_id = Convert.ToInt32(row.Cells["dgvId"].Value);
@@ -305,17 +301,17 @@ namespace Restaurant_Management_System.Model
                 else
                 {
                     qry2 = "update order_item set proID = @proID, quantity = @quantity, " +
-                        "price = @price, subtotal = @subtotal where order_item_id = @order_item_id where order_item_id = @order_item_id";
+                        "price = @price, subtotal = @subtotal where order_item_id = @order_item_id";
                 }
-                
+
                 SqlCommand cmd2 = new SqlCommand(qry2, MainClass.con);
                 cmd2.Parameters.AddWithValue("@ID", order_item_id);
                 cmd2.Parameters.AddWithValue("@order_id", order_id);
-                cmd2.Parameters.AddWithValue("@proID", Convert.ToInt32( row.Cells["dgvpro_id"].Value));
-                cmd2.Parameters.AddWithValue("@quantity", Convert.ToInt32( row.Cells["dgvQty"].Value));
+                cmd2.Parameters.AddWithValue("@proID", Convert.ToInt32(row.Cells["dgvpro_id"].Value));
+                cmd2.Parameters.AddWithValue("@quantity", Convert.ToInt32(row.Cells["dgvQty"].Value));
                 cmd2.Parameters.AddWithValue("@price", Convert.ToDouble(row.Cells["dgvPrice"].Value));
                 cmd2.Parameters.AddWithValue("@subtotal", Convert.ToDouble(row.Cells["dgvAmount"].Value));
-                
+
                 if (MainClass.con.State == ConnectionState.Closed)
                 {
                     MainClass.con.Open();
@@ -326,17 +322,50 @@ namespace Restaurant_Management_System.Model
                 {
                     MainClass.con.Close();
                 }
-
-                guna2MessageDialog1.Show ("Order has been placed successfully");
-                order_id = 0;
-                order_item_id = 0;
-                guna2DataGridView1.Rows.Clear();
-                lblTable.Text = "";
-                lblWaiter.Text = "";
-                lblTable.Visible = false;
-                lblWaiter.Visible = false;
-                lblTotal.Text = "00";
             }
+            */
+            foreach (DataGridViewRow row in guna2DataGridView1.Rows)
+            {
+                if (row.IsNewRow) continue; // skip the empty row
+
+                order_item_id = row.Cells["dgvId"].Value == null ? 0 : Convert.ToInt32(row.Cells["dgvId"].Value);
+
+                if (order_item_id == 0)
+                {
+                    qry2 = @"INSERT INTO order_item (order_id, pro_id, quantity, price, subtotal) 
+                 VALUES (@order_id, @pro_id, @quantity, @price, @subtotal)";
+                }
+                else
+                {
+                    qry2 = @"UPDATE order_item 
+                 SET pro_id = @pro_id, quantity = @quantity, price = @price, subtotal = @subtotal 
+                 WHERE order_item_id = @order_item_id";
+                }
+
+                using (SqlCommand cmd2 = new SqlCommand(qry2, MainClass.con))
+                {
+                    cmd2.Parameters.AddWithValue("@order_item_id", order_item_id);
+                    cmd2.Parameters.AddWithValue("@order_id", order_id);
+                    cmd2.Parameters.AddWithValue("@pro_id", Convert.ToInt32(row.Cells["dgvpro_id"].Value));
+                    cmd2.Parameters.AddWithValue("@quantity", Convert.ToInt32(row.Cells["dgvQty"].Value));
+                    cmd2.Parameters.AddWithValue("@price", Convert.ToDouble(row.Cells["dgvPrice"].Value));
+                    cmd2.Parameters.AddWithValue("@subtotal", Convert.ToDouble(row.Cells["dgvAmount"].Value));
+
+                    if (MainClass.con.State == ConnectionState.Closed) MainClass.con.Open();
+                    cmd2.ExecuteNonQuery();
+                    if (MainClass.con.State == ConnectionState.Open) MainClass.con.Close();
+                }
+            }
+
+            guna2MessageDialog1.Show ("Order has been placed successfully");
+            //order_id = 0;
+            //order_item_id = 0;
+            guna2DataGridView1.Rows.Clear();
+            lblTable.Text = "";
+            lblWaiter.Text = "";
+            lblTable.Visible = false;
+            lblWaiter.Visible = false;
+            lblTotal.Text = "00";
         }
 
         public int id = 0;
@@ -363,7 +392,8 @@ namespace Restaurant_Management_System.Model
             DataTable dt2 = new DataTable();
             SqlDataAdapter da2 = new SqlDataAdapter(cmd2);
             da2.Fill(dt2);
-            MessageBox.Show("Rows returned: " + dt2.Rows.Count.ToString());
+
+            //MessageBox.Show("Rows returned: " + dt2.Rows.Count.ToString()); --for debugging an issue
 
 
             guna2DataGridView1.Rows.Clear();
@@ -380,10 +410,18 @@ namespace Restaurant_Management_System.Model
                 
                 guna2DataGridView1.Rows.Add(obj);
             }
+            GetTotal();
         }
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnCheckout_Click(object sender, EventArgs e)
+        {
+            GetTotal();
+            frmCheckout frm = new frmCheckout(id, currentTotal);
+            frm.ShowDialog();
         }
     }          
 }

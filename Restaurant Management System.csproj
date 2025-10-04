@@ -86,6 +86,12 @@
     <Compile Include="Model\frmCategoryAdd.Designer.cs">
       <DependentUpon>frmCategoryAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\frmCheckout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\frmCheckout.Designer.cs">
+      <DependentUpon>frmCheckout.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\frmFoodItemAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Model\frmCategoryAdd.resx">
       <DependentUpon>frmCategoryAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\frmCheckout.resx">
+      <DependentUpon>frmCheckout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Model\frmFoodItemAdd.resx">
       <DependentUpon>frmFoodItemAdd.cs</DependentUpon>
@@ -315,6 +324,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Guna.UI2.dll" />
+    <None Include="Resources\icons8-bill-icon-100.png" />
     <None Include="Resources\icons8-full-recycle-bin-96.png" />
     <None Include="Resources\icons8-pen-96.png" />
     <None Include="Resources\icons8-bill-1001.png" />
