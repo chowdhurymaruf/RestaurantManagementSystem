@@ -112,7 +112,7 @@
             this.btnPayment.FillColor = System.Drawing.Color.Transparent;
             this.btnPayment.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPayment.ForeColor = System.Drawing.Color.White;
-            this.btnPayment.Image = global::Restaurant_Management_System.Properties.Resources.icons8_payment_100__1_;
+            this.btnPayment.Image = global::Restaurant_Management_System.Properties.Resources.icons8_pos_terminal_50;
             this.btnPayment.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnPayment.ImageOffset = new System.Drawing.Point(10, 0);
             this.btnPayment.Location = new System.Drawing.Point(86, 580);
@@ -120,7 +120,7 @@
             this.btnPayment.Name = "btnPayment";
             this.btnPayment.Size = new System.Drawing.Size(186, 64);
             this.btnPayment.TabIndex = 7;
-            this.btnPayment.Text = "Payment";
+            this.btnPayment.Text = "POS";
             this.btnPayment.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnPayment.TextOffset = new System.Drawing.Point(20, 0);
             this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);

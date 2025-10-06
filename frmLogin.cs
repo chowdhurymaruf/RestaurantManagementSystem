@@ -17,11 +17,6 @@ namespace Restaurant_Management_System
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -40,7 +35,6 @@ namespace Restaurant_Management_System
                 frmMain frm = new frmMain();
                 frm.Show();
             }
-
         }
     }
 }

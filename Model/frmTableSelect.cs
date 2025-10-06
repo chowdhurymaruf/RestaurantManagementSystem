@@ -34,7 +34,7 @@ namespace Restaurant_Management_System.Model
                 b.Text = row["tname"].ToString();
                 b.Width = 150;
                 b.Height = 50;
-                b.FillColor = Color.FromArgb(241, 85, 126);
+                b.FillColor = Color.FromArgb(123, 92, 214);
                 b.HoverState.FillColor = Color.FromArgb(50, 55, 89);
 
                 //event for click

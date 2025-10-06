@@ -50,7 +50,6 @@
             this.label1.Size = new System.Drawing.Size(87, 23);
             this.label1.TabIndex = 5;
             this.label1.Text = "Username";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -65,8 +64,8 @@
             // 
             this.btnLogin.AutoRoundedCorners = true;
             this.btnLogin.BorderRadius = 25;
-            this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(85)))), ((int)(((byte)(26)))));
-            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLogin.FillColor = System.Drawing.Color.LimeGreen;
+            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Location = new System.Drawing.Point(53, 404);
             this.btnLogin.Name = "btnLogin";
@@ -111,6 +110,8 @@
             // 
             // txtUser
             // 
+            this.txtUser.AutoRoundedCorners = true;
+            this.txtUser.BorderRadius = 18;
             this.txtUser.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUser.DefaultText = "";
             this.txtUser.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -131,6 +132,8 @@
             // 
             // txtPass
             // 
+            this.txtPass.AutoRoundedCorners = true;
+            this.txtPass.BorderRadius = 17;
             this.txtPass.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPass.DefaultText = "";
             this.txtPass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -155,7 +158,7 @@
             this.btnExit.AutoRoundedCorners = true;
             this.btnExit.BorderRadius = 25;
             this.btnExit.FillColor = System.Drawing.Color.Red;
-            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Location = new System.Drawing.Point(198, 404);
             this.btnExit.Name = "btnExit";

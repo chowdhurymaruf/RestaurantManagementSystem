@@ -50,6 +50,11 @@
             this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.IconLeft = global::Restaurant_Management_System.Properties.Resources.icons8_search_100;
+            this.txtSearch.Location = new System.Drawing.Point(718, 91);
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(714, 64);
             // 
             // btnAdd
             // 
@@ -64,6 +69,10 @@
             // 
             this.label2.Size = new System.Drawing.Size(111, 32);
             this.label2.Text = "Table List";
+            // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.Size = new System.Drawing.Size(989, 10);
             // 
             // guna2DataGridView1
             // 
@@ -108,7 +117,7 @@
             this.guna2DataGridView1.RowHeadersWidth = 51;
             this.guna2DataGridView1.RowTemplate.Height = 35;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(1096, 389);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(986, 389);
             this.guna2DataGridView1.TabIndex = 6;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -146,6 +155,7 @@
             this.dgvId.MinimumWidth = 6;
             this.dgvId.Name = "dgvId";
             this.dgvId.ReadOnly = true;
+            this.dgvId.Visible = false;
             // 
             // dgvName
             // 
@@ -179,7 +189,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1220, 655);
+            this.ClientSize = new System.Drawing.Size(1111, 655);
             this.Controls.Add(this.guna2DataGridView1);
             this.Name = "frmTableView";
             this.Text = "frmTableView";

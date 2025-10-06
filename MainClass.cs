@@ -93,7 +93,6 @@ namespace Restaurant_Management_System
                 for (int i = 0; i < lb.Items.Count; i++)
                 {
                     string colNam1 = ((DataGridViewColumn)lb.Items[i]).Name;
-                    //gv.Columns[colNam1].DataPropertyName = dt.Columns[i].ColumnName;
                     gv.Columns[colNam1].DataPropertyName = dt.Columns[i].ToString();
                 }
 
@@ -116,19 +115,6 @@ namespace Restaurant_Management_System
                 count++;
                 row.Cells[0].Value = count;
             }
-            /*var dgv = sender as DataGridView;
-            if (dgv.Columns[e.ColumnIndex].Name == "dgvPrice")
-            {
-                if (e.Value != null)
-                {
-                    decimal d;
-                    if (decimal.TryParse(e.Value.ToString(), out d))
-                    {
-                        e.Value = d.ToString("0.00");
-                        e.FormattingApplied = true;
-                    }
-                }
-            }*/
         }
 
         //For ComboBox Fill

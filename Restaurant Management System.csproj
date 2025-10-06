@@ -178,6 +178,9 @@
     <Compile Include="View\frmTableView.Designer.cs">
       <DependentUpon>frmTableView.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmHome.resx">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -324,6 +327,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Guna.UI2.dll" />
+    <None Include="Resources\Screenshot 2025-10-06 221603.png" />
+    <None Include="Resources\icons8-pos-terminal-50.png" />
+    <None Include="Resources\icons8-chef-hat-50.png" />
+    <None Include="Resources\icons8-restaurant-table-50.png" />
+    <None Include="Resources\icons8-take-away-food-50.png" />
+    <None Include="Resources\icons8-motorcycle-delivery-single-box-50.png" />
+    <None Include="Resources\icons8-add-file-100.png" />
     <None Include="Resources\icons8-bill-icon-100.png" />
     <None Include="Resources\icons8-full-recycle-bin-96.png" />
     <None Include="Resources\icons8-pen-96.png" />

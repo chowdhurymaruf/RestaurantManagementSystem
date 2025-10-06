@@ -72,6 +72,10 @@
             this.label2.Size = new System.Drawing.Size(104, 32);
             this.label2.Text = "Staff List";
             // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.Size = new System.Drawing.Size(818, 10);
+            // 
             // guna2DataGridView1
             // 
             this.guna2DataGridView1.AllowUserToAddRows = false;
@@ -155,6 +159,7 @@
             this.dgvId.MinimumWidth = 6;
             this.dgvId.Name = "dgvId";
             this.dgvId.ReadOnly = true;
+            this.dgvId.Visible = false;
             // 
             // dgvName
             // 

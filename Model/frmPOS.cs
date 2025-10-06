@@ -23,10 +23,7 @@ namespace Restaurant_Management_System.Model
         public int order_id = 0;
         public string OrderType;
         public string WaiterName;
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        
         private void frmPOS_Load(object sender, EventArgs e)
         {
             guna2DataGridView1.BorderStyle = BorderStyle.FixedSingle;
