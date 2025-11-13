@@ -34,7 +34,14 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblWaiter = new System.Windows.Forms.Label();
             this.lblTable = new System.Windows.Forms.Label();
+            this.btnDineIn = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btnTakeAway = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btnDelivery = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btnKot = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btnBill = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btnNew = new Guna.UI2.WinForms.Guna2TileButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnCheckout = new Guna.UI2.WinForms.Guna2Button();
             this.lblTotal = new System.Windows.Forms.Label();
@@ -51,19 +58,12 @@
             this.dgvAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnDineIn = new Guna.UI2.WinForms.Guna2TileButton();
-            this.btnTakeAway = new Guna.UI2.WinForms.Guna2TileButton();
-            this.btnDelivery = new Guna.UI2.WinForms.Guna2TileButton();
-            this.btnKot = new Guna.UI2.WinForms.Guna2TileButton();
-            this.btnBill = new Guna.UI2.WinForms.Guna2TileButton();
-            this.btnNew = new Guna.UI2.WinForms.Guna2TileButton();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -111,6 +111,138 @@
             this.lblTable.Text = "Table";
             this.lblTable.Visible = false;
             // 
+            // btnDineIn
+            // 
+            this.btnDineIn.BackColor = System.Drawing.Color.Transparent;
+            this.btnDineIn.BorderColor = System.Drawing.Color.Silver;
+            this.btnDineIn.BorderRadius = 10;
+            this.btnDineIn.BorderThickness = 2;
+            this.btnDineIn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
+            this.btnDineIn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDineIn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDineIn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDineIn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDineIn.FillColor = System.Drawing.Color.Empty;
+            this.btnDineIn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDineIn.ForeColor = System.Drawing.Color.White;
+            this.btnDineIn.Image = global::Restaurant_Management_System.Properties.Resources.icons8_restaurant_table_50;
+            this.btnDineIn.Location = new System.Drawing.Point(647, 12);
+            this.btnDineIn.Name = "btnDineIn";
+            this.btnDineIn.Size = new System.Drawing.Size(78, 78);
+            this.btnDineIn.TabIndex = 8;
+            this.btnDineIn.Text = "Dine In";
+            this.btnDineIn.Click += new System.EventHandler(this.btnDineIn_Click);
+            // 
+            // btnTakeAway
+            // 
+            this.btnTakeAway.BackColor = System.Drawing.Color.Transparent;
+            this.btnTakeAway.BorderColor = System.Drawing.Color.Silver;
+            this.btnTakeAway.BorderRadius = 10;
+            this.btnTakeAway.BorderThickness = 2;
+            this.btnTakeAway.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
+            this.btnTakeAway.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnTakeAway.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnTakeAway.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnTakeAway.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnTakeAway.FillColor = System.Drawing.Color.Empty;
+            this.btnTakeAway.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnTakeAway.ForeColor = System.Drawing.Color.White;
+            this.btnTakeAway.Image = global::Restaurant_Management_System.Properties.Resources.icons8_take_away_food_50;
+            this.btnTakeAway.Location = new System.Drawing.Point(563, 12);
+            this.btnTakeAway.Name = "btnTakeAway";
+            this.btnTakeAway.Size = new System.Drawing.Size(78, 78);
+            this.btnTakeAway.TabIndex = 7;
+            this.btnTakeAway.Text = "Take Away";
+            this.btnTakeAway.Click += new System.EventHandler(this.btnTakeAway_Click);
+            // 
+            // btnDelivery
+            // 
+            this.btnDelivery.BackColor = System.Drawing.Color.Transparent;
+            this.btnDelivery.BorderColor = System.Drawing.Color.Silver;
+            this.btnDelivery.BorderRadius = 10;
+            this.btnDelivery.BorderThickness = 2;
+            this.btnDelivery.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
+            this.btnDelivery.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelivery.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelivery.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDelivery.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDelivery.FillColor = System.Drawing.Color.Empty;
+            this.btnDelivery.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDelivery.ForeColor = System.Drawing.Color.White;
+            this.btnDelivery.Image = global::Restaurant_Management_System.Properties.Resources.icons8_motorcycle_delivery_single_box_50;
+            this.btnDelivery.Location = new System.Drawing.Point(479, 12);
+            this.btnDelivery.Name = "btnDelivery";
+            this.btnDelivery.Size = new System.Drawing.Size(78, 78);
+            this.btnDelivery.TabIndex = 6;
+            this.btnDelivery.Text = "Delivery";
+            this.btnDelivery.Click += new System.EventHandler(this.btnDelivery_Click);
+            // 
+            // btnKot
+            // 
+            this.btnKot.BackColor = System.Drawing.Color.Transparent;
+            this.btnKot.BorderColor = System.Drawing.Color.Silver;
+            this.btnKot.BorderRadius = 10;
+            this.btnKot.BorderThickness = 2;
+            this.btnKot.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
+            this.btnKot.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnKot.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnKot.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnKot.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnKot.FillColor = System.Drawing.Color.Empty;
+            this.btnKot.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnKot.ForeColor = System.Drawing.Color.White;
+            this.btnKot.Image = global::Restaurant_Management_System.Properties.Resources.icons8_chef_hat_50;
+            this.btnKot.Location = new System.Drawing.Point(731, 12);
+            this.btnKot.Name = "btnKot";
+            this.btnKot.Size = new System.Drawing.Size(78, 78);
+            this.btnKot.TabIndex = 5;
+            this.btnKot.Text = "KOT";
+            this.btnKot.Click += new System.EventHandler(this.btnKot_Click);
+            // 
+            // btnBill
+            // 
+            this.btnBill.BackColor = System.Drawing.Color.Transparent;
+            this.btnBill.BorderColor = System.Drawing.Color.Silver;
+            this.btnBill.BorderRadius = 10;
+            this.btnBill.BorderThickness = 2;
+            this.btnBill.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
+            this.btnBill.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBill.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBill.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBill.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBill.FillColor = System.Drawing.Color.Empty;
+            this.btnBill.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBill.ForeColor = System.Drawing.Color.White;
+            this.btnBill.Image = global::Restaurant_Management_System.Properties.Resources.icons8_bill_icon_100;
+            this.btnBill.Location = new System.Drawing.Point(395, 12);
+            this.btnBill.Name = "btnBill";
+            this.btnBill.Size = new System.Drawing.Size(78, 78);
+            this.btnBill.TabIndex = 4;
+            this.btnBill.Text = "Bill List";
+            this.btnBill.Click += new System.EventHandler(this.btnBill_Click);
+            // 
+            // btnNew
+            // 
+            this.btnNew.BackColor = System.Drawing.Color.Transparent;
+            this.btnNew.BorderColor = System.Drawing.Color.Silver;
+            this.btnNew.BorderRadius = 10;
+            this.btnNew.BorderThickness = 2;
+            this.btnNew.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
+            this.btnNew.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNew.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNew.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNew.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNew.FillColor = System.Drawing.Color.Empty;
+            this.btnNew.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnNew.ForeColor = System.Drawing.Color.White;
+            this.btnNew.Image = global::Restaurant_Management_System.Properties.Resources.icons8_add_file_100;
+            this.btnNew.Location = new System.Drawing.Point(311, 12);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(78, 78);
+            this.btnNew.TabIndex = 2;
+            this.btnNew.Text = "New";
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -122,6 +254,19 @@
             this.label1.Size = new System.Drawing.Size(173, 37);
             this.label1.TabIndex = 1;
             this.label1.Text = "POS Terminal";
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = global::Restaurant_Management_System.Properties.Resources.icons8_pos_terminal_50;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(80, 68);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 0;
+            this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.UseTransparentBackground = true;
             // 
             // guna2Panel2
             // 
@@ -147,7 +292,7 @@
             this.btnCheckout.FillColor = System.Drawing.Color.LimeGreen;
             this.btnCheckout.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheckout.ForeColor = System.Drawing.Color.White;
-            this.btnCheckout.Location = new System.Drawing.Point(1084, 24);
+            this.btnCheckout.Location = new System.Drawing.Point(1148, 24);
             this.btnCheckout.Name = "btnCheckout";
             this.btnCheckout.Size = new System.Drawing.Size(156, 45);
             this.btnCheckout.TabIndex = 4;
@@ -368,151 +513,6 @@
             this.txtSearch.TabIndex = 9;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
-            // btnDineIn
-            // 
-            this.btnDineIn.BackColor = System.Drawing.Color.Transparent;
-            this.btnDineIn.BorderColor = System.Drawing.Color.Silver;
-            this.btnDineIn.BorderRadius = 10;
-            this.btnDineIn.BorderThickness = 2;
-            this.btnDineIn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
-            this.btnDineIn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDineIn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDineIn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDineIn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDineIn.FillColor = System.Drawing.Color.Empty;
-            this.btnDineIn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnDineIn.ForeColor = System.Drawing.Color.White;
-            this.btnDineIn.Image = global::Restaurant_Management_System.Properties.Resources.icons8_restaurant_table_50;
-            this.btnDineIn.Location = new System.Drawing.Point(647, 12);
-            this.btnDineIn.Name = "btnDineIn";
-            this.btnDineIn.Size = new System.Drawing.Size(78, 78);
-            this.btnDineIn.TabIndex = 8;
-            this.btnDineIn.Text = "Dine In";
-            this.btnDineIn.Click += new System.EventHandler(this.btnDineIn_Click);
-            // 
-            // btnTakeAway
-            // 
-            this.btnTakeAway.BackColor = System.Drawing.Color.Transparent;
-            this.btnTakeAway.BorderColor = System.Drawing.Color.Silver;
-            this.btnTakeAway.BorderRadius = 10;
-            this.btnTakeAway.BorderThickness = 2;
-            this.btnTakeAway.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
-            this.btnTakeAway.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnTakeAway.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnTakeAway.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnTakeAway.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnTakeAway.FillColor = System.Drawing.Color.Empty;
-            this.btnTakeAway.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnTakeAway.ForeColor = System.Drawing.Color.White;
-            this.btnTakeAway.Image = global::Restaurant_Management_System.Properties.Resources.icons8_take_away_food_50;
-            this.btnTakeAway.Location = new System.Drawing.Point(563, 12);
-            this.btnTakeAway.Name = "btnTakeAway";
-            this.btnTakeAway.Size = new System.Drawing.Size(78, 78);
-            this.btnTakeAway.TabIndex = 7;
-            this.btnTakeAway.Text = "Take Away";
-            this.btnTakeAway.Click += new System.EventHandler(this.btnTakeAway_Click);
-            // 
-            // btnDelivery
-            // 
-            this.btnDelivery.BackColor = System.Drawing.Color.Transparent;
-            this.btnDelivery.BorderColor = System.Drawing.Color.Silver;
-            this.btnDelivery.BorderRadius = 10;
-            this.btnDelivery.BorderThickness = 2;
-            this.btnDelivery.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
-            this.btnDelivery.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDelivery.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDelivery.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDelivery.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDelivery.FillColor = System.Drawing.Color.Empty;
-            this.btnDelivery.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnDelivery.ForeColor = System.Drawing.Color.White;
-            this.btnDelivery.Image = global::Restaurant_Management_System.Properties.Resources.icons8_motorcycle_delivery_single_box_50;
-            this.btnDelivery.Location = new System.Drawing.Point(479, 12);
-            this.btnDelivery.Name = "btnDelivery";
-            this.btnDelivery.Size = new System.Drawing.Size(78, 78);
-            this.btnDelivery.TabIndex = 6;
-            this.btnDelivery.Text = "Delivery";
-            this.btnDelivery.Click += new System.EventHandler(this.btnDelivery_Click);
-            // 
-            // btnKot
-            // 
-            this.btnKot.BackColor = System.Drawing.Color.Transparent;
-            this.btnKot.BorderColor = System.Drawing.Color.Silver;
-            this.btnKot.BorderRadius = 10;
-            this.btnKot.BorderThickness = 2;
-            this.btnKot.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
-            this.btnKot.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnKot.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnKot.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnKot.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnKot.FillColor = System.Drawing.Color.Empty;
-            this.btnKot.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnKot.ForeColor = System.Drawing.Color.White;
-            this.btnKot.Image = global::Restaurant_Management_System.Properties.Resources.icons8_chef_hat_50;
-            this.btnKot.Location = new System.Drawing.Point(731, 12);
-            this.btnKot.Name = "btnKot";
-            this.btnKot.Size = new System.Drawing.Size(78, 78);
-            this.btnKot.TabIndex = 5;
-            this.btnKot.Text = "KOT";
-            this.btnKot.Click += new System.EventHandler(this.btnKot_Click);
-            // 
-            // btnBill
-            // 
-            this.btnBill.BackColor = System.Drawing.Color.Transparent;
-            this.btnBill.BorderColor = System.Drawing.Color.Silver;
-            this.btnBill.BorderRadius = 10;
-            this.btnBill.BorderThickness = 2;
-            this.btnBill.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
-            this.btnBill.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnBill.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnBill.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBill.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBill.FillColor = System.Drawing.Color.Empty;
-            this.btnBill.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnBill.ForeColor = System.Drawing.Color.White;
-            this.btnBill.Image = global::Restaurant_Management_System.Properties.Resources.icons8_bill_icon_100;
-            this.btnBill.Location = new System.Drawing.Point(395, 12);
-            this.btnBill.Name = "btnBill";
-            this.btnBill.Size = new System.Drawing.Size(78, 78);
-            this.btnBill.TabIndex = 4;
-            this.btnBill.Text = "Bill List";
-            this.btnBill.Click += new System.EventHandler(this.btnBill_Click);
-            // 
-            // btnNew
-            // 
-            this.btnNew.BackColor = System.Drawing.Color.Transparent;
-            this.btnNew.BorderColor = System.Drawing.Color.Silver;
-            this.btnNew.BorderRadius = 10;
-            this.btnNew.BorderThickness = 2;
-            this.btnNew.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(92)))), ((int)(((byte)(214)))));
-            this.btnNew.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnNew.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnNew.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnNew.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnNew.FillColor = System.Drawing.Color.Empty;
-            this.btnNew.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnNew.ForeColor = System.Drawing.Color.White;
-            this.btnNew.Image = global::Restaurant_Management_System.Properties.Resources.icons8_add_file_100;
-            this.btnNew.Location = new System.Drawing.Point(311, 12);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(78, 78);
-            this.btnNew.TabIndex = 2;
-            this.btnNew.Text = "New";
-            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = global::Restaurant_Management_System.Properties.Resources.icons8_pos_terminal_50;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(80, 68);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.UseTransparentBackground = true;
-            // 
             // dataGridViewImageColumn1
             // 
             this.dataGridViewImageColumn1.HeaderText = "";
@@ -549,10 +549,10 @@
             this.Load += new System.EventHandler(this.frmPOS_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

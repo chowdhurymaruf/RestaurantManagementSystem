@@ -40,8 +40,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.IblUser = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
             this.CenterPanel = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -65,7 +66,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(272, 758);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnKitchen
             // 
@@ -297,26 +297,28 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
-            this.panel2.Controls.Add(this.IblUser);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.lblUser);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(272, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(926, 100);
             this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // IblUser
+            // lblUser
             // 
-            this.IblUser.AutoSize = true;
-            this.IblUser.BackColor = System.Drawing.Color.Transparent;
-            this.IblUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IblUser.Location = new System.Drawing.Point(34, 29);
-            this.IblUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.IblUser.Name = "IblUser";
-            this.IblUser.Size = new System.Drawing.Size(65, 28);
-            this.IblUser.TabIndex = 0;
-            this.IblUser.Text = "label2";
-            this.IblUser.Click += new System.EventHandler(this.label2_Click);
+            this.lblUser.AutoSize = true;
+            this.lblUser.BackColor = System.Drawing.Color.Transparent;
+            this.lblUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.Location = new System.Drawing.Point(160, 34);
+            this.lblUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(51, 28);
+            this.lblUser.TabIndex = 0;
+            this.lblUser.Text = "User";
+            this.lblUser.Click += new System.EventHandler(this.label2_Click);
             // 
             // CenterPanel
             // 
@@ -326,6 +328,16 @@
             this.CenterPanel.Name = "CenterPanel";
             this.CenterPanel.Size = new System.Drawing.Size(926, 658);
             this.CenterPanel.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(45, 34);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(110, 28);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Welcome, ";
             // 
             // frmMain
             // 
@@ -364,6 +376,7 @@
         private Guna.UI2.WinForms.Guna2Button btnFoodItems;
         private Guna.UI2.WinForms.Guna2Button btnCategory;
         private Guna.UI2.WinForms.Guna2Button btnKitchen;
-        private System.Windows.Forms.Label IblUser;
+        private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.Label label2;
     }
 }

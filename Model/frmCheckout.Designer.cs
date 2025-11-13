@@ -102,6 +102,7 @@
             this.txtTotal.SelectedText = "";
             this.txtTotal.Size = new System.Drawing.Size(291, 36);
             this.txtTotal.TabIndex = 4;
+            this.txtTotal.TextChanged += new System.EventHandler(this.txtTotal_TextChanged);
             // 
             // label2
             // 
@@ -117,9 +118,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(63, 363);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 23);
+            this.label3.Size = new System.Drawing.Size(46, 23);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Date and Time";
+            this.label3.Text = "Date";
             // 
             // label4
             // 

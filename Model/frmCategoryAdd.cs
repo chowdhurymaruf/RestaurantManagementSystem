@@ -23,11 +23,11 @@ namespace Restaurant_Management_System.Model
         {
             string qry = "";
 
-            if (Id == 0) //For Save
+            if (Id == 0)
             {
                 qry = "Insert into category values (@Name)";
             }
-            else //For Update
+            else 
             {
                 qry = "Update category Set catName = @Name where catID = @Id ";
             }

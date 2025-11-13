@@ -27,7 +27,7 @@ namespace Restaurant_Management_System.View
         private void GetOrders()
         {
             flowLayoutPanel1.Controls.Clear();
-            string qry1 = @"Select * from Orders where status = 'Paid' ";
+            string qry1 = @"Select * from Orders where status = 'Pending' ";
             SqlCommand cmd1 = new SqlCommand(qry1, MainClass.con);
             DataTable dt1 = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd1);
@@ -105,7 +105,7 @@ namespace Restaurant_Management_System.View
                 for (int j = 0; j < dt2.Rows.Count; j++)
                 {
                     Label lbl5 = new Label();
-                    lbl5.ForeColor = Color.White;
+                    lbl5.ForeColor = Color.Black;
                     lbl5.Margin = new Padding(10, 5, 3, 0);
                     lbl5.AutoSize = true;
 

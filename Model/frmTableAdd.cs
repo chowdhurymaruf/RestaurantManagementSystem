@@ -26,7 +26,7 @@ namespace Restaurant_Management_System.Model
 
             if (Id == 0) //For Save
             {
-                qry = "Insert into tables values (@Name)";
+                qry = "Insert into tables (tName) values (@Name)";
             }
             else //For Update
             {

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic.ApplicationServices;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Restaurant_Management_System
 {
@@ -24,13 +26,14 @@ namespace Restaurant_Management_System
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //Database create and user table
             if(MainClass.isValidUser(txtUser.Text, txtPass.Text) == false)
             {
                 guna2MessageDialog1.Show("Invalid credentials, please try again");
             }
+
             else
             {
+                
                 this.Hide();
                 frmMain frm = new frmMain();
                 frm.Show();

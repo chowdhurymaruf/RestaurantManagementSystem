@@ -19,11 +19,7 @@ namespace Restaurant_Management_System
             InitializeComponent();
         }
 
-        private void frmMain_Load(Object sender, EventArgs e)
-        {
-            IblUser.Text = MainClass.USER;
-        }
-
+        
         //Method to add controls
 
         public void Add_Controls(Form f)
@@ -33,21 +29,6 @@ namespace Restaurant_Management_System
             f.TopLevel = false;
             CenterPanel.Controls.Add(f);
             f.Show();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
         }
 
         private void btnCategory_Click(object sender, EventArgs e)
@@ -68,11 +49,12 @@ namespace Restaurant_Management_System
         private void btnHome_Click(object sender, EventArgs e)
         {
             Add_Controls(new frmHome());
+
         }
 
         private void frmMain_Load_1(object sender, EventArgs e)
         {
-
+            lblUser.Text = MainClass.USER;
         }
 
         private void btnStaff_Click(object sender, EventArgs e)
@@ -94,6 +76,11 @@ namespace Restaurant_Management_System
         private void btnKitchen_Click(object sender, EventArgs e)
         {
             Add_Controls(new frmKitchenView());
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

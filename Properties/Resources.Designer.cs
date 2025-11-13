@@ -593,6 +593,16 @@ namespace Restaurant_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap RMS_1_01_768x768 {
+            get {
+                object obj = ResourceManager.GetObject("RMS-1-01-768x768", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Screenshot_2025_10_06_221603 {
             get {
                 object obj = ResourceManager.GetObject("Screenshot 2025-10-06 221603", resourceCulture);

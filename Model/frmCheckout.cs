@@ -28,7 +28,6 @@ namespace Restaurant_Management_System.Model
         {
             if (cmbPaymentMethod.SelectedIndex == -1)
             {
-                //MessageBox.Show("Please select a payment method.");
                 messageInvalid.Show("Please select a payment method.");
                 return;
             }
@@ -43,7 +42,6 @@ namespace Restaurant_Management_System.Model
 
                 //MessageBox.Show("Order ID: " + orderId.ToString());// debugging line
 
-                // 1. Insert into Payments
                 string qry1 = @"INSERT INTO Payments (order_id, payment_date, payment_method, amount, status)
                                 VALUES (@order_id, @payment_date, @payment_method, @amount, 'Paid')";
 
@@ -56,7 +54,6 @@ namespace Restaurant_Management_System.Model
                     cmd1.ExecuteNonQuery();
                 }
 
-                // 2. Update Orders
                 string qry2 = @"UPDATE Orders SET Status = 'Paid' WHERE order_id = @order_id";
 
                 using (SqlCommand cmd2 = new SqlCommand(qry2, MainClass.con))
@@ -65,7 +62,6 @@ namespace Restaurant_Management_System.Model
                     cmd2.ExecuteNonQuery();
                 }
                 messageSaved.Show("Payment saved and order marked as Paid.");
-                //MessageBox.Show("Payment saved and order marked as Paid.");
                 this.Close();
             }
             catch (Exception ex)
@@ -82,6 +78,11 @@ namespace Restaurant_Management_System.Model
         public override void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtTotal_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

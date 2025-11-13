@@ -56,7 +56,7 @@ namespace Restaurant_Management_System.View
         {
             if (guna2DataGridView1.CurrentCell.OwningColumn.Name == "dgvedit")
             {
-                frmCategoryAdd frm = new frmCategoryAdd();
+                frmTableAdd frm = new frmTableAdd();
                 frm.Id = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvId"].Value);
                 frm.txtName.Text = Convert.ToString(guna2DataGridView1.CurrentRow.Cells["dgvName"].Value);
                 frm.ShowDialog();
@@ -68,7 +68,7 @@ namespace Restaurant_Management_System.View
                 string qry = "Delete from tables where tID = " + id + "";
                 Hashtable ht = new Hashtable();
                 MainClass.SQl(qry, null);
-                MainClass.SQl(qry, ht);
+                //MainClass.SQl(qry, ht);
 
                 MessageBox.Show("Data Deleted Successfully");
                 GetData();

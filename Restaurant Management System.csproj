@@ -327,6 +327,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Guna.UI2.dll" />
+    <None Include="Resources\RMS-1-01-768x768.png" />
     <None Include="Resources\Screenshot 2025-10-06 221603.png" />
     <None Include="Resources\icons8-pos-terminal-50.png" />
     <None Include="Resources\icons8-chef-hat-50.png" />

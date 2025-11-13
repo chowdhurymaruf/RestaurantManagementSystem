@@ -30,7 +30,7 @@ namespace Restaurant_Management_System.Model
             }
             else //For Update
             {
-                qry = "Update category Set catName = @Name, sPhone = @phone, sRole = @role where staffID = @Id ";
+                qry = "Update staff Set sName = @Name, sPhone = @phone, sRole = @role where staffID = @Id ";
             }
 
             Hashtable ht = new Hashtable();
